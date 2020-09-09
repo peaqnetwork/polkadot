@@ -215,14 +215,24 @@ impl sp_std::convert::TryFrom<u8> for ParachainDispatchOrigin {
 	}
 }
 
+/// An opaque byte buffer that encodes an entrypoint and the arguments that should be
+/// provided to it upon the dispatch.
+///
+/// NOTE In order to be executable the byte buffer should be decoded which potentially can fail if
+/// the encoding was changed.
+pub type RawDispatchable = Vec<u8>;
+
 /// A message from a parachain to its Relay Chain.
 #[derive(Clone, PartialEq, Eq, Encode, Decode)]
 #[cfg_attr(feature = "std", derive(Debug, Hash))]
-pub struct UpwardMessage {
-	/// The origin for the message to be sent from.
-	pub origin: ParachainDispatchOrigin,
-	/// The message data.
-	pub data: Vec<u8>,
+pub enum UpwardMessage {
+	/// This upward message is meant to schedule execution of a provided dispatchable.
+	Dispatchable {
+		/// The origin with which the dispatchable should be executed.
+		origin: ParachainDispatchOrigin,
+		/// The dispatchable to be executed in its raw form.
+		dispatchable: RawDispatchable,
+	},
 }
 
 /// Validation parameters for evaluating the parachain validity function.
