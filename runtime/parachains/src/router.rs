@@ -27,7 +27,10 @@ use crate::{
 use sp_std::prelude::*;
 use frame_support::{decl_error, decl_module, decl_storage, weights::Weight, traits::Get};
 use sp_runtime::traits::{BlakeTwo256, Hash as HashT, SaturatedConversion};
-use primitives::v1::{Id as ParaId, DownwardMessage, InboundDownwardMessage, Hash, UpwardMessage};
+use primitives::v1::{
+	Id as ParaId, DownwardMessage, InboundDownwardMessage, Hash, UpwardMessage, RawDispatchable,
+	ParachainDispatchOrigin,
+};
 use codec::Encode;
 
 pub trait Trait: frame_system::Trait + configuration::Trait {}
@@ -54,6 +57,24 @@ decl_storage! {
 		/// - `B`: is the relay-chain block number in which a message was appended.
 		/// - `H(M)`: is the hash of the message being appended.
 		DownwardMessageQueueHeads: map hasher(twox_64_concat) ParaId => Option<Hash>;
+
+		/*
+		 * Upward Message Passing (UMP)
+		 *
+		 * Storage layout required for UMP, specifically dispatchable upward messages.
+		 */
+
+		/// Dispatchable objects ready to be dispatched onto the relay chain. The messages are processed in FIFO order.
+		RelayDispatchQueues: map hasher(twox_64_concat) ParaId => VecDeque<(ParachainDispatchOrigin, RawDispatchable)>;
+		/// Size of the dispatch queues. Caches sizes of the queues in `RelayDispatchQueue`.
+		/// First item in the tuple is the count of messages and second
+		/// is the total length (in bytes) of the message payloads.
+		RelayDispatchQueueSize: map hasher(twox_64_concat) ParaId => (u32, u32);
+		/// The ordered list of `ParaId`s that have a `RelayDispatchQueue` entry.
+		NeedsDispatch: Vec<ParaId>;
+		/// This is the para that gets will get dispatched first during the next upward dispatchable queue
+		/// execution round.
+		NextDispatchRoundStartWith: Option<ParaId>;
 	}
 }
 
@@ -163,13 +184,29 @@ impl<T: Trait> Module<T> {
 		para: ParaId,
 		upward_messages: &[UpwardMessage],
 	) -> bool {
-		drop(para);
-
 		if upward_messages.len() as u32 > config.max_upward_message_num_per_candidate {
 			return false;
 		}
 
-		for _ in upward_messages {
+		let (mut para_queue_count, mut para_queue_size) =
+			<Self as Store>::RelayDispatchQueueSize::get(&para);
+
+		for msg in upward_messages {
+			match *msg {
+				UpwardMessage::Dispatchable {
+					ref dispatchable, ..
+				} => {
+					para_queue_count += 1;
+					para_queue_size += dispatchable.len() as u32;
+				}
+			}
+		}
+
+		// make sure that the queue is not overfilled.
+		// we do it here only once since returning false invalidates the whole relay-chain block.
+		if para_queue_count > config.max_upward_queue_count
+			|| para_queue_size > config.max_upward_queue_size
+		{
 			return false;
 		}
 
@@ -178,13 +215,49 @@ impl<T: Trait> Module<T> {
 
 	/// Enacts all the upward messages sent by a candidate.
 	pub(crate) fn enact_upward_messages(para: ParaId, upward_messages: &[UpwardMessage]) -> Weight {
-		drop(para);
+		let mut weight = 0;
 
-		for _ in upward_messages {
-			todo!()
+		let mut dispatchables = vec![];
+
+		for msg in upward_messages {
+			match *msg {
+				UpwardMessage::Dispatchable {
+					ref origin,
+					ref dispatchable,
+				} => {
+					dispatchables.push((origin.clone(), dispatchable.clone()));
+				}
+			}
 		}
 
-		0
+		if !dispatchables.is_empty() {
+			let (extra_cnt, extra_size) =
+				dispatchables.iter().fold((0, 0), |(cnt, size), (_, d)| {
+					(cnt + 1, size + d.len() as u32)
+				});
+
+			<Self as Store>::RelayDispatchQueues::mutate(&para, |v| {
+				v.extend(dispatchables.into_iter())
+			});
+
+			<Self as Store>::RelayDispatchQueueSize::mutate(
+				&para,
+				|(ref mut cnt, ref mut size)| {
+					*cnt += extra_cnt;
+					*size += extra_size;
+				},
+			);
+
+			<Self as Store>::NeedsDispatch::mutate(|v| {
+				if let Err(i) = v.binary_search(&para) {
+					v.insert(i, para);
+				}
+			});
+
+			weight += T::DbWeight::get().reads_writes(3, 3);
+		}
+
+		weight
 	}
 
 	/// Prunes the specified number of messages from the downward message queue of the given para.
