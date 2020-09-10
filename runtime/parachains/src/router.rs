@@ -25,15 +25,27 @@ use crate::{
 	initializer,
 };
 use sp_std::prelude::*;
-use frame_support::{decl_error, decl_module, decl_storage, weights::Weight, traits::Get};
+use sp_std::collections::{btree_map::BTreeMap, vec_deque::VecDeque};
+use frame_support::{
+	decl_error, decl_module, decl_storage,
+	weights::Weight,
+	traits::Get,
+	dispatch::{
+		PostDispatchInfo, DispatchResult, Dispatchable, GetDispatchInfo, DispatchResultWithPostInfo,
+	},
+};
 use sp_runtime::traits::{BlakeTwo256, Hash as HashT, SaturatedConversion};
 use primitives::v1::{
 	Id as ParaId, DownwardMessage, InboundDownwardMessage, Hash, UpwardMessage, RawDispatchable,
 	ParachainDispatchOrigin,
 };
-use codec::Encode;
+use codec::{Encode, Decode};
 
-pub trait Trait: frame_system::Trait + configuration::Trait {}
+pub trait Trait: frame_system::Trait + configuration::Trait {
+	type Call: Dispatchable<PostInfo = PostDispatchInfo, Origin = <Self as frame_system::Trait>::Origin>
+		+ GetDispatchInfo
+		+ Decode;
+}
 
 decl_storage! {
 	trait Store for Module<T: Trait> as Router {
@@ -292,7 +304,54 @@ impl<T: Trait> Module<T> {
 
 	/// Devote some time into dispatching pending dispatchable upward messages.
 	pub(crate) fn process_pending_upward_dispatchables() {
-		// no-op for now, will be filled in the following commits
+		let mut weight = 0;
+
+		let mut queue_cache: BTreeMap<
+			ParaId,
+			VecDeque<(ParachainDispatchOrigin, RawDispatchable)>,
+		> = BTreeMap::new();
+
+		let mut needs_dispatch: Vec<ParaId> = <Self as Store>::NeedsDispatch::get();
+		let mut start_with = <Self as Store>::NextDispatchRoundStartWith::get();
+
+		let mut idx = match start_with {
+			Some(para) => match needs_dispatch.binary_search(&para) {
+				Ok(found_idx) => found_idx,
+				// well, that's weird, since the `NextDispatchRoundStartWith` is supposed to be reset.
+				// let's select 0 as the starting index as a safe bet.
+				Err(_supposed_idx) => 0,
+			},
+			None => 0,
+		};
+
+		loop {
+			let dispatchee = match needs_dispatch.get(idx) {
+				Some(para) => *para,
+				None => break,
+			};
+
+			let queue = queue_cache
+				.entry(dispatchee)
+				.or_insert_with(|| <Self as Store>::RelayDispatchQueues::get(&dispatchee));
+
+			let (origin, raw_dispatchable) = match queue.pop_front() {
+				Some(next) => next,
+				None => {
+					todo!();
+				}
+			};
+
+			let dispatchable = match <T as Trait>::Call::decode(&mut &raw_dispatchable[..]) {
+				Ok(dispatchable) => dispatchable,
+				Err(_) => {
+					// too bad.
+					todo!()
+				}
+			};
+
+			let info = dispatchable.get_dispatch_info();
+			let result = call.dispatch(RawOrigin::Signed(who.clone()).into());
+		}
 	}
 }
 
