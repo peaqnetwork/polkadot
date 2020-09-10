@@ -79,4 +79,3 @@ runtime-benchmarks=["cli/runtime-benchmarks"]
 service-rewr= [
 	"cli/service-rewr",
 ]
-
