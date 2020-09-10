@@ -4,16 +4,19 @@ The Router module is responsible for all messaging mechanisms supported between 
 
 ## Storage
 
-Storage layout:
+General storage entries
 
 ```rust
 /// Paras that are to be cleaned up at the end of the session.
 /// The entries are sorted ascending by the para id.
 OutgoingParas: Vec<ParaId>;
+```
+
+### Upward Message Passing (UMP)
+
+```rust
 /// Dispatchable objects ready to be dispatched onto the relay chain. The messages are processed in FIFO order.
-/// This is subject to `max_upward_queue_count` and
-/// `watermark_queue_size` from `HostConfiguration`.
-RelayDispatchQueues: map ParaId => Vec<RawDispatchable>;
+RelayDispatchQueues: map ParaId => Vec<(ParachainDispatchOrigin, RawDispatchable)>;
 /// Size of the dispatch queues. Caches sizes of the queues in `RelayDispatchQueue`.
 /// First item in the tuple is the count of messages and second
 /// is the total length (in bytes) of the message payloads.
@@ -36,7 +39,7 @@ DownwardMessageQueues: map ParaId => Vec<InboundDownwardMessage>;
 ///
 /// Each link in this chain has a form:
 /// `(prev_head, B, H(M))`, where
-/// - `prev_head`: is the previous head hash.
+/// - `prev_head`: is the previous head hash or zero if none.
 /// - `B`: is the relay-chain block number in which a message was appended.
 /// - `H(M)`: is the hash of the message being appended.
 DownwardMessageQueueHeads: map ParaId => Option<Hash>;
@@ -243,7 +246,7 @@ The following routine is intended to be called in the same time when `Paras::sch
 The following routine is meant to execute pending entries in upward dispatchable queues. This function doesn't fail, even if
 any of dispatchables return an error.
 
-`process_upward_dispatchables()`:
+`process_pending_upward_dispatchables()`:
   1. Initialize a cumulative weight counter `T` to 0
   1. Iterate over items in `NeedsDispatch` cyclically, starting with `NextDispatchRoundStartWith`. If the item specified is `None` start from the beginning. For each `P` encountered:
       1. Dequeue `D` the first dispatchable `D` from `RelayDispatchQueues` for `P`
