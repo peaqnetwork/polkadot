@@ -49,6 +49,7 @@ use sp_runtime::{
 		BlakeTwo256, Block as BlockT, OpaqueKeys, AccountIdLookup,
 		Extrinsic as ExtrinsicT, SaturatedConversion, Verify,
 	},
+	ModuleId,
 };
 use pallet_im_online::sr25519::AuthorityId as ImOnlineId;
 use authority_discovery_primitives::AuthorityId as AuthorityDiscoveryId;
@@ -61,8 +62,7 @@ use sp_core::OpaqueMetadata;
 use sp_staking::SessionIndex;
 use pallet_session::historical as session_historical;
 use frame_system::{EnsureRoot, EnsureOneOf, EnsureSigned};
-use runtime_common::{paras_sudo_wrapper, paras_registrar, xcm_sender};
-
+use runtime_common::{paras_sudo_wrapper, paras_registrar, xcm_sender, crowdloan};
 use runtime_parachains::origin as parachains_origin;
 use runtime_parachains::configuration as parachains_configuration;
 use runtime_parachains::shared as parachains_shared;
@@ -106,7 +106,7 @@ pub const VERSION: RuntimeVersion = RuntimeVersion {
 	#[cfg(not(feature = "disable-runtime-api"))]
 	apis: RUNTIME_API_VERSIONS,
 	#[cfg(feature = "disable-runtime-api")]
-	apis: sp_version::create_apis_vec![[]],
+	// apis: sp_version::create_apis_vec![[]],
 	transaction_version: 0,
 };
 
@@ -207,7 +207,29 @@ construct_runtime! {
 
 		// Propose parachain pallet.
 		ProposeParachain: propose_parachain::{Module, Call, Storage, Event<T>},
+
+		// Here we begin hacking in the crowdloan pallet
+		Crowdloan: crowdloan::{Module, Call, Storage, Event<T>},
 	}
+}
+
+parameter_types!{
+	pub const CrowdloanModuleId: ModuleId = ModuleId(*b"py/cfund");
+	// I don't know how many dots this is concretely. It is 10 * ED
+	pub const SubmissionDeposit: Balance = 10 * CENTS;
+	pub const MinContribution: Balance = 10 * CENTS;
+	pub const RetirementPeriod: BlockNumber = 1 * MINUTES;
+	pub const RemoveKeysLimit: u32 = 100; // :shrug:
+}
+
+impl runtime_common::crowdloan::Config for Runtime {
+	type Event = Event;
+	type ModuleId = CrowdloanModuleId;
+	type SubmissionDeposit = SubmissionDeposit;
+	type MinContribution = MinContribution;
+	type RetirementPeriod = RetirementPeriod;
+	type OrphanedFunds = ();
+	type RemoveKeysLimit = RemoveKeysLimit;
 }
 
 pub struct BaseFilter;
