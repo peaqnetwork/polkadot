@@ -106,7 +106,7 @@ pub const VERSION: RuntimeVersion = RuntimeVersion {
 	#[cfg(not(feature = "disable-runtime-api"))]
 	apis: RUNTIME_API_VERSIONS,
 	#[cfg(feature = "disable-runtime-api")]
-	// apis: sp_version::create_apis_vec![[]],
+	apis: sp_version::create_apis_vec![[]],
 	transaction_version: 0,
 };
 
@@ -214,6 +214,50 @@ construct_runtime! {
 	}
 }
 
+use sp_runtime::DispatchResult;
+use runtime_parachains::paras::ParaGenesisArgs;
+use primitives::v1::HeadData;
+
+pub struct MockRegistrar;
+impl slots::Registrar<AccountId> for MockRegistrar {
+	fn new_id() -> ParaId {
+		//TODO have a storage item that counts up
+		// I think there is a RefCell example in the solts pallet tests.
+		1000.into()
+	}
+
+	fn head_data_size_allowed(head_data_size: u32) -> bool {
+		true
+	}
+
+	fn code_size_allowed(code_size: u32) -> bool {
+		true
+	}
+
+	fn register_para(
+		id: ParaId,
+		_parachain: bool,
+		validation_code: ValidationCode,
+		genesis_head: HeadData,
+	) -> DispatchResult {
+		// Copied from paras_registrar and sudo_paras_wrapper
+
+		// ensure!(validation_code.0.starts_with(WASM_MAGIC), Error::<T>::DefinitelyNotWasm);
+
+		let genesis = ParaGenesisArgs {
+			genesis_head,
+			validation_code,
+			parachain: true,
+		};
+
+		runtime_parachains::schedule_para_initialize::<Runtime>(id, genesis).map_err(|_| "Error::<T>::ParaAlreadyExists".into())
+	}
+
+	fn deregister_para(id: ParaId) -> DispatchResult {
+		todo!()
+	}
+}
+
 parameter_types!{
 	pub const EndingPeriod: BlockNumber = 1 * MINUTES;
 	pub const LeasePeriod: BlockNumber = 10 * MINUTES;
@@ -222,7 +266,7 @@ parameter_types!{
 impl slots::Config for Runtime {
 	type Event = Event;
 	type Currency = Balances;
-	type Parachains = Registrar;
+	type Parachains = MockRegistrar;
 	type EndingPeriod = EndingPeriod;
 	type LeasePeriod = LeasePeriod;
 	type Randomness = Babe;
