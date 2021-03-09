@@ -62,7 +62,7 @@ use sp_core::OpaqueMetadata;
 use sp_staking::SessionIndex;
 use pallet_session::historical as session_historical;
 use frame_system::{EnsureRoot, EnsureOneOf, EnsureSigned};
-use runtime_common::{paras_sudo_wrapper, paras_registrar, xcm_sender, crowdloan};
+use runtime_common::{paras_sudo_wrapper, paras_registrar, xcm_sender, crowdloan, slots};
 use runtime_parachains::origin as parachains_origin;
 use runtime_parachains::configuration as parachains_configuration;
 use runtime_parachains::shared as parachains_shared;
@@ -210,7 +210,22 @@ construct_runtime! {
 
 		// Here we begin hacking in the crowdloan pallet
 		Crowdloan: crowdloan::{Module, Call, Storage, Event<T>},
+		Slots: slots::{Module, Call, Storage, Event<T>},
 	}
+}
+
+parameter_types!{
+	pub const EndingPeriod: BlockNumber = 1 * MINUTES;
+	pub const LeasePeriod: BlockNumber = 10 * MINUTES;
+}
+
+impl slots::Config for Runtime {
+	type Event = Event;
+	type Currency = Balances;
+	type Parachains = Registrar;
+	type EndingPeriod = EndingPeriod;
+	type LeasePeriod = LeasePeriod;
+	type Randomness = Babe;
 }
 
 parameter_types!{
@@ -222,7 +237,7 @@ parameter_types!{
 	pub const RemoveKeysLimit: u32 = 100; // :shrug:
 }
 
-impl runtime_common::crowdloan::Config for Runtime {
+impl crowdloan::Config for Runtime {
 	type Event = Event;
 	type ModuleId = CrowdloanModuleId;
 	type SubmissionDeposit = SubmissionDeposit;
