@@ -16,7 +16,6 @@
 
 //! The bitfield signing subsystem produces `SignedAvailabilityBitfield`s once per block.
 
-#![deny(unused_crate_dependencies)]
 #![warn(missing_docs)]
 #![recursion_limit="256"]
 

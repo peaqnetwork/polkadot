@@ -16,7 +16,6 @@
 
 //! The Network Bridge Subsystem - protocol multiplexer for Polkadot.
 
-#![deny(unused_crate_dependencies)]
 #![warn(missing_docs)]
 
 

@@ -16,7 +16,6 @@
 
 //! Implements a `CandidateBackingSubsystem`.
 
-#![deny(unused_crate_dependencies)]
 
 use std::collections::{HashMap, HashSet};
 use std::pin::Pin;

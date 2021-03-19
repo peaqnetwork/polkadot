@@ -27,7 +27,6 @@
 //! * Last finalized block number
 //! * Ancestors
 
-#![deny(unused_crate_dependencies, unused_results)]
 #![warn(missing_docs)]
 
 use polkadot_subsystem::{
