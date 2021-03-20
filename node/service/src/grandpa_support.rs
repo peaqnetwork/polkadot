@@ -82,8 +82,8 @@ impl<B> grandpa::VotingRule<PolkadotBlock, B> for ApprovalCheckingDiagnostic
 		best_target: &PolkadotHeader,
 		current_target: &PolkadotHeader,
 	) -> grandpa::VotingRuleResult<PolkadotBlock> {
-		// always wait 50 blocks behind the head to finalize.
-		const DIAGNOSTIC_GRANDPA_DELAY: BlockNumber = 50;
+		// always wait 5 blocks behind the head to finalize.
+		const DIAGNOSTIC_GRANDPA_DELAY: BlockNumber = 5;
 
 		let aux = || {
 			let find_target = |target_number: BlockNumber, current_header: &PolkadotHeader| {
