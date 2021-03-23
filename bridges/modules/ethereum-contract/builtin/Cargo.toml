@@ -19,10 +19,10 @@ rialto-runtime = { path = "../../../bin/rialto/runtime" }
 
 # Substrate Dependencies
 
-sc-finality-grandpa = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sp-blockchain = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sp-finality-grandpa = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "master" }
+sc-finality-grandpa = { git = "https://github.com/purestake/substrate", branch = "moonbeam-v0.7" }
+sp-blockchain = { git = "https://github.com/purestake/substrate", branch = "moonbeam-v0.7" }
+sp-finality-grandpa = { git = "https://github.com/purestake/substrate", branch = "moonbeam-v0.7" }
+sp-runtime = { git = "https://github.com/purestake/substrate", branch = "moonbeam-v0.7" }
 
 [dev-dependencies]
-sp-core = { git = "https://github.com/paritytech/substrate", branch = "master" }
+sp-core = { git = "https://github.com/purestake/substrate", branch = "moonbeam-v0.7" }
