@@ -368,7 +368,7 @@ construct_runtime! {
 		Inclusion: parachains_inclusion::{Module, Call, Storage, Event<T>},
 		InclusionInherent: parachains_inclusion_inherent::{Module, Call, Storage},
 		Scheduler: parachains_scheduler::{Module, Call, Storage},
-		Paras: parachains_paras::{Module, Call, Storage},
+		Paras: parachains_paras::{Module, Call, Storage, Config<T>},
 		Initializer: parachains_initializer::{Module, Call, Storage},
 
 		ParasSudoWrapper: paras_sudo_wrapper::{Module, Call},
