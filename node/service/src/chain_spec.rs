@@ -641,6 +641,10 @@ fn kusama_staging_testnet_config_genesis(wasm_binary: &[u8]) -> kusama::GenesisC
 			claims: vec![],
 			vesting: vec![],
 		},
+		parachains_paras: kusama_runtime::ParasConfig {
+			paras: vec![],
+		    _phdata: Default::default(),
+		},
 		pallet_vesting: kusama::VestingConfig { vesting: vec![] },
 		pallet_treasury: Default::default(),
 		parachains_configuration: Default::default(),
@@ -1269,6 +1273,10 @@ pub fn kusama_testnet_genesis(
 			force_era: Forcing::NotForcing,
 			slash_reward_fraction: Perbill::from_percent(10),
 			..Default::default()
+		},
+		parachains_paras: kusama_runtime::ParasConfig {
+			paras: vec![],
+		    _phdata: Default::default(),
 		},
 		pallet_elections_phragmen: Default::default(),
 		pallet_democracy: kusama::DemocracyConfig::default(),
