@@ -104,6 +104,7 @@ pub use pallet_balances::Call as BalancesCall;
 /// Constant values used within the runtime.
 pub mod constants;
 use constants::{time::*, currency::*, fee::*, paras::*};
+use runtime_common::paras_sudo_wrapper;
 
 // Weights used in the runtime.
 mod weights;
@@ -120,7 +121,7 @@ pub const VERSION: RuntimeVersion = RuntimeVersion {
 	spec_name: create_runtime_str!("kusama"),
 	impl_name: create_runtime_str!("parity-kusama"),
 	authoring_version: 2,
-	spec_version: 9030,
+	spec_version: 9031,
 	impl_version: 0,
 	#[cfg(not(feature = "disable-runtime-api"))]
 	apis: RUNTIME_API_VERSIONS,
@@ -1347,6 +1348,13 @@ parameter_types! {
 	pub const MaxIntakeBids: u32 = 100;
 }
 
+// SUDO
+impl paras_sudo_wrapper::Config for Runtime {}
+impl pallet_sudo::Config for Runtime {
+	type Event = Event;
+	type Call = Call;
+}
+
 impl pallet_gilt::Config for Runtime {
 	type Event = Event;
 	type Currency = Balances;
@@ -1454,6 +1462,10 @@ construct_runtime! {
 		ParasHrmp: parachains_hrmp::{Pallet, Call, Storage, Event} = 60,
 		ParasSessionInfo: parachains_session_info::{Pallet, Call, Storage} = 61,
 
+		// Sudo
+		ParasSudoWrapper: paras_sudo_wrapper::{Pallet, Call},
+		Sudo: pallet_sudo::{Pallet, Call, Storage, Event<T>, Config<T>},
+		
 		// Parachain Onboarding Pallets. Start indices at 70 to leave room.
 		Registrar: paras_registrar::{Pallet, Call, Storage, Event<T>} = 70,
 		Slots: slots::{Pallet, Call, Storage, Event<T>} = 71,
