@@ -646,9 +646,9 @@ fn kusama_staging_testnet_config_genesis(wasm_binary: &[u8]) -> kusama::GenesisC
 					)
 				})
 				.collect::<Vec<_>>(),
-				pallet_sudo: kusama::SudoConfig {
-					key: endowed_accounts[0].clone(),
-				},
+		},
+		pallet_sudo: kusama::SudoConfig {
+			key: endowed_accounts[0].clone(),
 		},
 		pallet_staking: kusama::StakingConfig {
 			validator_count: 50,
