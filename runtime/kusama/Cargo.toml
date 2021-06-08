@@ -74,6 +74,8 @@ pallet-vesting = { git = "https://github.com/paritytech/substrate", default-feat
 pallet-xcm = { path = "../../xcm/pallet-xcm", default-features = false }
 frame-election-provider-support = { git = "https://github.com/paritytech/substrate", default-features = false , branch = "polkadot-v0.9.5" }
 
+pallet-sudo = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.4", default-features = false }
+
 frame-benchmarking = { git = "https://github.com/paritytech/substrate", default-features = false, optional = true , branch = "polkadot-v0.9.5" }
 frame-try-runtime = { git = "https://github.com/paritytech/substrate", default-features = false, optional = true , branch = "polkadot-v0.9.5" }
 pallet-offences-benchmarking = { git = "https://github.com/paritytech/substrate", default-features = false, optional = true , branch = "polkadot-v0.9.5" }
@@ -157,6 +159,7 @@ std = [
 	"pallet-babe/std",
 	"pallet-randomness-collective-flip/std",
 	"pallet-xcm/std",
+	"pallet-sudo/std",
 	"sp-runtime/std",
 	"sp-staking/std",
 	"frame-system/std",
