@@ -1478,8 +1478,8 @@ construct_runtime! {
 		ParasSessionInfo: parachains_session_info::{Pallet, Call, Storage} = 61,
 
 		// Sudo
-		ParasSudoWrapper: paras_sudo_wrapper::{Pallet, Call},
-		Sudo: pallet_sudo::{Pallet, Call, Storage, Event<T>, Config<T>},
+		ParasSudoWrapper: paras_sudo_wrapper::{Pallet, Call} = 120,
+		Sudo: pallet_sudo::{Pallet, Call, Storage, Event<T>, Config<T>} = 121,
 
 		// Parachain Onboarding Pallets. Start indices at 70 to leave room.
 		Registrar: paras_registrar::{Pallet, Call, Storage, Event<T>} = 70,
