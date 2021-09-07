@@ -17,7 +17,7 @@ smallvec = "1.6.1"
 
 authority-discovery-primitives = { package = "sp-authority-discovery", git = "https://github.com/purestake/substrate", default-features = false , branch = "crystalin-v0.9.9-block-response-length" }
 babe-primitives = { package = "sp-consensus-babe", git = "https://github.com/purestake/substrate", default-features = false , branch = "crystalin-v0.9.9-block-response-length" }
-beefy-primitives = { git = "https://github.com/paritytech/grandpa-bridge-gadget", default-features = false , branch = "polkadot-v0.9.9" }
+beefy-primitives = { git = "https://github.com/purestake/grandpa-bridge-gadget", default-features = false , branch = "notlesh-v0.9.9-block-response-length" }
 sp-api = { git = "https://github.com/purestake/substrate", default-features = false , branch = "crystalin-v0.9.9-block-response-length" }
 inherents = { package = "sp-inherents", git = "https://github.com/purestake/substrate", default-features = false , branch = "crystalin-v0.9.9-block-response-length" }
 offchain-primitives = { package = "sp-offchain", git = "https://github.com/purestake/substrate", default-features = false , branch = "crystalin-v0.9.9-block-response-length" }
