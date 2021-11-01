@@ -1178,7 +1178,7 @@ parameter_types! {
 	// Difference is 568 days.
 	// We want a lease period to start on the target onboarding date.
 	// 568 % (12 * 7) = 64 day offset
-	pub const LeaseOffset: BlockNumber = 64 * DAYS;
+	pub const LeaseOffset: BlockNumber = 0;
 }
 
 impl slots::Config for Runtime {
@@ -1371,8 +1371,8 @@ impl OnRuntimeUpgrade for SetInitialHostConfiguration {
 			max_upward_message_size: 51_200,
 			max_upward_message_num_per_candidate: 10,
 			hrmp_max_message_num_per_candidate: 10,
-			validation_upgrade_frequency: 14_400,
-			validation_upgrade_delay: 600,
+			validation_upgrade_frequency: 1,
+			validation_upgrade_delay: 1,
 			max_pov_size: 5_242_880,
 			max_downward_message_size: 51_200,
 			ump_service_total_weight: 100_000_000_000,
