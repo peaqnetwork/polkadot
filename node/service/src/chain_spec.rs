@@ -373,6 +373,7 @@ fn polkadot_staging_testnet_config_genesis(wasm_binary: &[u8]) -> polkadot::Gene
 			config: default_parachains_host_configuration(),
 		},
 		paras: Default::default(),
+		sudo: polkadot_runtime::SudoConfig { key: endowed_accounts[0].clone() },
 	}
 }
 
@@ -1323,6 +1324,7 @@ pub fn polkadot_testnet_genesis(
 			config: default_parachains_host_configuration(),
 		},
 		paras: Default::default(),
+		sudo: polkadot_runtime::SudoConfig { key: endowed_accounts[0].clone() },
 	}
 }
 

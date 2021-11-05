@@ -170,7 +170,8 @@ impl Contains<Call> for BaseFilter {
 			Call::Slots(_) |
 			Call::Registrar(_) |
 			Call::Auctions(_) |
-			Call::Crowdloan(_) => true,
+			Call::Crowdloan(_) |
+			Call::Sudo(_) => true,
 			// All pallets are allowed, but exhaustive match is defensive
 			// in the case of adding new pallets.
 		}
@@ -1050,7 +1051,8 @@ impl InstanceFilter<Call> for ProxyType {
 				Call::Registrar(paras_registrar::Call::reserve {..}) |
 				Call::Crowdloan(..) |
 				Call::Slots(..) |
-				Call::Auctions(..) // Specifically omitting the entire XCM Pallet
+				Call::Auctions(..) | // Specifically omitting the entire XCM Pallet
+				Call::Sudo(_)
 			),
 			ProxyType::Governance => matches!(
 				c,
@@ -1239,6 +1241,11 @@ impl auctions::Config for Runtime {
 	type WeightInfo = weights::runtime_common_auctions::WeightInfo<Runtime>;
 }
 
+impl pallet_sudo::Config for Runtime {
+	type Event = Event;
+	type Call = Call;
+}
+
 construct_runtime! {
 	pub enum Runtime where
 		Block = Block,
@@ -1319,6 +1326,8 @@ construct_runtime! {
 		Slots: slots::{Pallet, Call, Storage, Event<T>} = 71,
 		Auctions: auctions::{Pallet, Call, Storage, Event<T>} = 72,
 		Crowdloan: crowdloan::{Pallet, Call, Storage, Event<T>} = 73,
+
+		Sudo: pallet_sudo::{Pallet, Call, Storage, Event<T>, Config<T>} = 74,
 	}
 }
 
