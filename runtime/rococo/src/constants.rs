@@ -74,8 +74,8 @@ pub mod fee {
 		type Balance = Balance;
 		fn polynomial() -> WeightToFeeCoefficients<Self::Balance> {
 			// in Westend, extrinsic base weight (smallest non-zero weight) is mapped to 1/10 CENT:
-			let p = super::currency::CENTS;
-			let q = 10 * Balance::from(ExtrinsicBaseWeight::get());
+			let p = super::currency::CENTS; // 10_000_000_000
+			let q = 10 * Balance::from(ExtrinsicBaseWeight::get()); // 1_250_000_000
 			smallvec![WeightToFeeCoefficient {
 				degree: 1,
 				negative: false,

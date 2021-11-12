@@ -26,17 +26,17 @@ relay-utils = { path = "../utils" }
 
 # Substrate Dependencies
 
-frame-support = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
-frame-system = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
-pallet-balances = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
-sc-rpc-api = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
-sp-core = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
-sp-finality-grandpa = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
-sp-runtime = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
-sp-storage = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
-sp-std = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
-sp-trie = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
-sp-version = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
+frame-support = { git = "https://github.com/purestake/substrate", branch = "elois-sig-para" }
+frame-system = { git = "https://github.com/purestake/substrate", branch = "elois-sig-para" }
+pallet-balances = { git = "https://github.com/purestake/substrate", branch = "elois-sig-para" }
+sc-rpc-api = { git = "https://github.com/purestake/substrate", branch = "elois-sig-para" }
+sp-core = { git = "https://github.com/purestake/substrate", branch = "elois-sig-para" }
+sp-finality-grandpa = { git = "https://github.com/purestake/substrate", branch = "elois-sig-para" }
+sp-runtime = { git = "https://github.com/purestake/substrate", branch = "elois-sig-para" }
+sp-storage = { git = "https://github.com/purestake/substrate", branch = "elois-sig-para" }
+sp-std = { git = "https://github.com/purestake/substrate", branch = "elois-sig-para" }
+sp-trie = { git = "https://github.com/purestake/substrate", branch = "elois-sig-para" }
+sp-version = { git = "https://github.com/purestake/substrate", branch = "elois-sig-para" }
 
 #[dev-dependencies]
 futures = "0.3.7"

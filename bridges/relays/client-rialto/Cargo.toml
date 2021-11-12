@@ -17,9 +17,9 @@ rialto-runtime = { path = "../../bin/rialto/runtime" }
 
 # Substrate Dependencies
 
-frame-system = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
-frame-support = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
-pallet-transaction-payment = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
-sp-core = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
-sp-keyring = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
-sp-runtime = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
+frame-system = { git = "https://github.com/purestake/substrate", branch = "elois-sig-para" }
+frame-support = { git = "https://github.com/purestake/substrate", branch = "elois-sig-para" }
+pallet-transaction-payment = { git = "https://github.com/purestake/substrate", branch = "elois-sig-para" }
+sp-core = { git = "https://github.com/purestake/substrate", branch = "elois-sig-para" }
+sp-keyring = { git = "https://github.com/purestake/substrate", branch = "elois-sig-para" }
+sp-runtime = { git = "https://github.com/purestake/substrate", branch = "elois-sig-para" }

@@ -14,11 +14,11 @@ serde = { version = "1.0", optional = true }
 
 # Substrate Dependencies
 
-frame-support = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.12" }
-sp-core = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.12" }
-sp-finality-grandpa = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.12" }
-sp-runtime = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.12" }
-sp-std = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.12" }
+frame-support = { git = "https://github.com/purestake/substrate", default-features = false , branch = "elois-sig-para" }
+sp-core = { git = "https://github.com/purestake/substrate", default-features = false , branch = "elois-sig-para" }
+sp-finality-grandpa = { git = "https://github.com/purestake/substrate", default-features = false , branch = "elois-sig-para" }
+sp-runtime = { git = "https://github.com/purestake/substrate", default-features = false , branch = "elois-sig-para" }
+sp-std = { git = "https://github.com/purestake/substrate", default-features = false , branch = "elois-sig-para" }
 
 [dev-dependencies]
 assert_matches = "1.5"
