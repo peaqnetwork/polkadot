@@ -66,7 +66,6 @@ pub struct XcmExecutor<Config: config::Config> {
 pub const MAX_RECURSION_LIMIT: u32 = 8;
 
 impl<Config: config::Config> ExecuteXcm<Config::Call> for XcmExecutor<Config> {
-	#[inline(never)]
 	fn execute_xcm_in_credit(
 		origin: impl Into<MultiLocation>,
 		mut message: Xcm<Config::Call>,
@@ -139,7 +138,6 @@ pub struct ExecutorError {
 
 #[cfg(feature = "runtime-benchmarks")]
 impl From<ExecutorError> for frame_benchmarking::BenchmarkError {
-	#[inline(never)]
 	fn from(error: ExecutorError) -> Self {
 		log::error!(
 			"XCM ERROR >> Index: {:?}, Error: {:?}, Weight: {:?}",
@@ -152,7 +150,6 @@ impl From<ExecutorError> for frame_benchmarking::BenchmarkError {
 }
 
 impl<Config: config::Config> XcmExecutor<Config> {
-	#[inline(never)]
 	pub fn new(origin: impl Into<MultiLocation>) -> Self {
 		let origin = origin.into();
 		Self {
@@ -173,7 +170,6 @@ impl<Config: config::Config> XcmExecutor<Config> {
 
 	/// Execute the XCM program fragment and report back the error and which instruction caused it,
 	/// or `Ok` if there was no error.
-	#[inline(never)]
 	pub fn execute(&mut self, xcm: Xcm<Config::Call>) -> Result<(), ExecutorError> {
 		log::trace!(
 			target: "xcm::execute",
@@ -200,7 +196,6 @@ impl<Config: config::Config> XcmExecutor<Config> {
 	}
 
 	/// Remove the registered error handler and return it. Do not refund its weight.
-	#[inline(never)]
 	fn take_error_handler(&mut self) -> Xcm<Config::Call> {
 		let mut r = Xcm::<Config::Call>(vec![]);
 		sp_std::mem::swap(&mut self.error_handler, &mut r);
@@ -209,7 +204,6 @@ impl<Config: config::Config> XcmExecutor<Config> {
 	}
 
 	/// Drop the registered error handler and refund its weight.
-	#[inline(never)]
 	fn drop_error_handler(&mut self) {
 		self.error_handler = Xcm::<Config::Call>(vec![]);
 		self.total_surplus.saturating_accrue(self.error_handler_weight);
@@ -217,7 +211,6 @@ impl<Config: config::Config> XcmExecutor<Config> {
 	}
 
 	/// Remove the registered appendix and return it.
-	#[inline(never)]
 	fn take_appendix(&mut self) -> Xcm<Config::Call> {
 		let mut r = Xcm::<Config::Call>(vec![]);
 		sp_std::mem::swap(&mut self.appendix, &mut r);
@@ -226,7 +219,6 @@ impl<Config: config::Config> XcmExecutor<Config> {
 	}
 
 	/// Refund any unused weight.
-	#[inline(never)]
 	fn refund_surplus(&mut self) {
 		let current_surplus = self.total_surplus.saturating_sub(self.total_refunded);
 		if current_surplus > 0 {
@@ -467,7 +459,6 @@ impl<Config: config::Config> XcmExecutor<Config> {
 		}
 	}
 
-	#[inline(never)]
 	fn reanchored(mut assets: Assets, dest: &MultiLocation) -> Result<MultiAssets, XcmError> {
 		let inv_dest = Config::LocationInverter::invert_location(&dest)
 			.map_err(|()| XcmError::MultiLocationNotInvertible)?;
