@@ -18,14 +18,14 @@ bp-runtime = { path = "../../primitives/runtime", default-features = false }
 
 # Substrate Dependencies
 
-frame-support = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.12" }
-frame-system = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.12" }
-sp-core = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.12" }
-sp-std = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.12" }
-sp-runtime = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.12" }
+frame-support = { git = "https://github.com/purestake/substrate", default-features = false , branch = "elois-jsonrpsee" }
+frame-system = { git = "https://github.com/purestake/substrate", default-features = false , branch = "elois-jsonrpsee" }
+sp-core = { git = "https://github.com/purestake/substrate", default-features = false , branch = "elois-jsonrpsee" }
+sp-std = { git = "https://github.com/purestake/substrate", default-features = false , branch = "elois-jsonrpsee" }
+sp-runtime = { git = "https://github.com/purestake/substrate", default-features = false , branch = "elois-jsonrpsee" }
 
 [dev-dependencies]
-sp-io = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
+sp-io = { git = "https://github.com/purestake/substrate", branch = "elois-jsonrpsee" }
 serde = "1.0"
 
 [features]

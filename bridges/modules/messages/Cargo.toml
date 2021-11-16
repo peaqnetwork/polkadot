@@ -23,18 +23,18 @@ bp-runtime = { path = "../../primitives/runtime", default-features = false }
 
 # Substrate Dependencies
 
-frame-benchmarking = { git = "https://github.com/purestake/substrate", default-features = false, optional = true , branch = "moonbeam-polkadot-v0.9.12" }
-frame-support = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.12" }
-frame-system = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.12" }
-sp-core = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.12" }
-sp-runtime = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.12" }
-sp-std = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.12" }
+frame-benchmarking = { git = "https://github.com/purestake/substrate", default-features = false, optional = true , branch = "elois-jsonrpsee" }
+frame-support = { git = "https://github.com/purestake/substrate", default-features = false , branch = "elois-jsonrpsee" }
+frame-system = { git = "https://github.com/purestake/substrate", default-features = false , branch = "elois-jsonrpsee" }
+sp-core = { git = "https://github.com/purestake/substrate", default-features = false , branch = "elois-jsonrpsee" }
+sp-runtime = { git = "https://github.com/purestake/substrate", default-features = false , branch = "elois-jsonrpsee" }
+sp-std = { git = "https://github.com/purestake/substrate", default-features = false , branch = "elois-jsonrpsee" }
 
 [dev-dependencies]
 hex = "0.4"
 hex-literal = "0.3"
-sp-io = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
-pallet-balances = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
+sp-io = { git = "https://github.com/purestake/substrate", branch = "elois-jsonrpsee" }
+pallet-balances = { git = "https://github.com/purestake/substrate", branch = "elois-jsonrpsee" }
 
 [features]
 default = ["std"]

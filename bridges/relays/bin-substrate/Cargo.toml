@@ -51,14 +51,14 @@ rialto-runtime = { path = "../../bin/rialto/runtime" }
 
 # Substrate Dependencies
 
-frame-support = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
-sp-core = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
-sp-finality-grandpa = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
-sp-runtime = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
-sp-trie = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
-sp-version = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
+frame-support = { git = "https://github.com/purestake/substrate", branch = "elois-jsonrpsee" }
+sp-core = { git = "https://github.com/purestake/substrate", branch = "elois-jsonrpsee" }
+sp-finality-grandpa = { git = "https://github.com/purestake/substrate", branch = "elois-jsonrpsee" }
+sp-runtime = { git = "https://github.com/purestake/substrate", branch = "elois-jsonrpsee" }
+sp-trie = { git = "https://github.com/purestake/substrate", branch = "elois-jsonrpsee" }
+sp-version = { git = "https://github.com/purestake/substrate", branch = "elois-jsonrpsee" }
 
 [dev-dependencies]
 hex-literal = "0.3"
 pallet-bridge-grandpa = { path = "../../modules/grandpa" }
-sp-keyring = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.12" }
+sp-keyring = { git = "https://github.com/purestake/substrate", branch = "elois-jsonrpsee" }
