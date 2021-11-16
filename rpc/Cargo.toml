@@ -5,7 +5,7 @@ authors = ["Parity Technologies <admin@parity.io>"]
 edition = "2018"
 
 [dependencies]
-jsonrpc-core = "18.0.0"
+jsonrpsee = { git = "https://github.com/paritytech/jsonrpsee", rev = "aacf7c0ecdb71da345e7c5cb0283f5cb5a040bd7", features = ["server"] }
 polkadot-primitives = { path = "../primitives" }
 sc-client-api = { git = "https://github.com/purestake/substrate", branch = "elois-jsonrpsee" }
 sp-blockchain = { git = "https://github.com/purestake/substrate", branch = "elois-jsonrpsee" }
