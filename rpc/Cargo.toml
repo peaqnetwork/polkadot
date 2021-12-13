@@ -5,7 +5,7 @@ authors = ["Parity Technologies <admin@parity.io>"]
 edition = "2018"
 
 [dependencies]
-jsonrpc-core = "18.0.0"
+jsonrpsee = { version = "0.6.0", features = ["server"] }
 polkadot-primitives = { path = "../primitives" }
 sc-client-api = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-jsonrpsee-v0.9.13" }
 sp-blockchain = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-jsonrpsee-v0.9.13" }
