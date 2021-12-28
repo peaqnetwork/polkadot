@@ -1202,7 +1202,7 @@ async fn poll_requests(
 	span_per_relay_parent: &HashMap<Hash, PerLeafSpan>,
 ) -> Vec<(PeerId, Rep)> {
 	let mut retained_requested = HashSet::new();
-	let mut reputation_changes = Vec::new();
+	let reputation_changes = Vec::new();
 	for (pending_collation, per_req) in requested_collations.iter_mut() {
 		// Despite the await, this won't block on the response itself.
 		let result =
@@ -1211,9 +1211,6 @@ async fn poll_requests(
 
 		if !result.is_ready() {
 			retained_requested.insert(pending_collation.clone());
-		}
-		if let CollationFetchResult::Error(rep) = result {
-			reputation_changes.push((pending_collation.peer_id.clone(), rep));
 		}
 	}
 	requested_collations.retain(|k, _| retained_requested.contains(k));
