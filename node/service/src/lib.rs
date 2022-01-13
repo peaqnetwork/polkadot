@@ -698,7 +698,7 @@ where
 			// production to 1 block per hour.
 			backoff.max_interval = 10;
 		}
-		backoff.max_interval = 2;
+		backoff.max_interval = 0;
 
 		Some(backoff)
 	};
