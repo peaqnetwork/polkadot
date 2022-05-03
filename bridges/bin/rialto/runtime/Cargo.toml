@@ -68,9 +68,9 @@ sp-version = { git = "https://github.com/purestake/substrate", default-features 
 
 # Polkadot (parachain) Dependencies
 
-polkadot-primitives = { git = "https://github.com/paritytech/polkadot", branch = "master", default-features = false }
-polkadot-runtime-common = { git = "https://github.com/paritytech/polkadot", branch = "master", default-features = false }
-polkadot-runtime-parachains = { git = "https://github.com/paritytech/polkadot", branch = "master", default-features = false }
+polkadot-primitives = { git = "https://github.com/purestake/polkadot", branch = "moonbeam-polkadot-v0.9.19-gorka-xcm-v3", default-features = false }
+polkadot-runtime-common = { git = "https://github.com/purestake/polkadot", branch = "moonbeam-polkadot-v0.9.19-gorka-xcm-v3", default-features = false }
+polkadot-runtime-parachains = { git = "https://github.com/purestake/polkadot", branch = "moonbeam-polkadot-v0.9.19-gorka-xcm-v3", default-features = false }
 
 [dev-dependencies]
 bridge-runtime-common = { path = "../../runtime-common", features = ["integrity-test"] }

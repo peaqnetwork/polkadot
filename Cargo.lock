@@ -472,8 +472,8 @@ dependencies = [
  "sp-arithmetic",
  "sp-blockchain",
  "sp-consensus",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-keystore",
  "sp-mmr-primitives",
  "sp-runtime",
  "substrate-prometheus-endpoint",
@@ -499,7 +499,7 @@ dependencies = [
  "sc-rpc",
  "sc-utils",
  "serde",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-runtime",
  "thiserror",
 ]
@@ -518,9 +518,9 @@ dependencies = [
  "scale-info",
  "sp-api",
  "sp-application-crypto",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -739,10 +739,10 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "serde",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-finality-grandpa",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -753,7 +753,7 @@ dependencies = [
  "frame-support",
  "parity-scale-codec",
  "scale-info",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -770,8 +770,8 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "serde",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-std",
 ]
 
 [[package]]
@@ -786,9 +786,9 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "sp-api",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
  "sp-version",
 ]
 
@@ -804,7 +804,7 @@ dependencies = [
  "smallvec",
  "sp-api",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
  "sp-version",
 ]
 
@@ -818,12 +818,12 @@ dependencies = [
  "num-traits",
  "parity-scale-codec",
  "scale-info",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
- "sp-state-machine 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-trie 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-state-machine",
+ "sp-std",
+ "sp-trie",
 ]
 
 [[package]]
@@ -837,7 +837,7 @@ dependencies = [
  "sp-application-crypto",
  "sp-finality-grandpa",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -851,7 +851,7 @@ dependencies = [
  "parity-scale-codec",
  "sp-api",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -873,11 +873,11 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "sp-api",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-runtime",
- "sp-state-machine 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-trie 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-state-machine",
+ "sp-std",
+ "sp-trie",
  "sp-version",
  "static_assertions",
 ]
@@ -2134,11 +2134,11 @@ dependencies = [
  "serde",
  "sp-api",
  "sp-application-crypto",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
  "sp-runtime",
- "sp-runtime-interface 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-storage 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-runtime-interface",
+ "sp-std",
+ "sp-storage",
 ]
 
 [[package]]
@@ -2173,16 +2173,16 @@ dependencies = [
  "serde_nanos",
  "sp-api",
  "sp-blockchain",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-database",
- "sp-externalities 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-externalities",
  "sp-inherents",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-keystore",
  "sp-runtime",
- "sp-state-machine 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-storage 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-trie 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-state-machine",
+ "sp-std",
+ "sp-storage",
+ "sp-trie",
  "thousands",
 ]
 
@@ -2210,7 +2210,7 @@ dependencies = [
  "sp-arithmetic",
  "sp-npos-elections",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -2222,11 +2222,11 @@ dependencies = [
  "frame-system",
  "parity-scale-codec",
  "scale-info",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-tracing 5.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
+ "sp-tracing",
 ]
 
 [[package]]
@@ -2258,15 +2258,15 @@ dependencies = [
  "serde",
  "smallvec",
  "sp-arithmetic",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-core-hashing-proc-macro",
  "sp-inherents",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
  "sp-runtime",
  "sp-staking",
- "sp-state-machine 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-tracing 5.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-state-machine",
+ "sp-std",
+ "sp-tracing",
  "tt-call",
 ]
 
@@ -2318,11 +2318,11 @@ dependencies = [
  "scale-info",
  "serde",
  "sp-arithmetic",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
- "sp-state-machine 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-state-machine",
+ "sp-std",
  "sp-version",
  "trybuild",
 ]
@@ -2348,10 +2348,10 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "serde",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
  "sp-version",
 ]
 
@@ -2365,9 +2365,9 @@ dependencies = [
  "frame-system",
  "parity-scale-codec",
  "scale-info",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -2387,7 +2387,7 @@ dependencies = [
  "frame-support",
  "sp-api",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -2587,7 +2587,7 @@ dependencies = [
  "git2",
  "num-format",
  "pallet-staking",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
 ]
 
 [[package]]
@@ -3497,9 +3497,9 @@ dependencies = [
  "sp-authority-discovery",
  "sp-block-builder",
  "sp-consensus-babe",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-inherents",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
  "sp-keyring",
  "sp-mmr-primitives",
  "sp-npos-elections",
@@ -3507,9 +3507,9 @@ dependencies = [
  "sp-runtime",
  "sp-session",
  "sp-staking",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
  "sp-transaction-pool",
- "sp-trie 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-trie",
  "sp-version",
  "static_assertions",
  "substrate-wasm-builder",
@@ -4988,7 +4988,7 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5004,7 +5004,7 @@ dependencies = [
  "sp-application-crypto",
  "sp-authority-discovery",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5019,7 +5019,7 @@ dependencies = [
  "scale-info",
  "sp-authorship",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5039,11 +5039,11 @@ dependencies = [
  "sp-application-crypto",
  "sp-consensus-babe",
  "sp-consensus-vrf",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
  "sp-runtime",
  "sp-session",
  "sp-staking",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5059,11 +5059,11 @@ dependencies = [
  "pallet-balances",
  "parity-scale-codec",
  "scale-info",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-tracing 5.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
+ "sp-tracing",
 ]
 
 [[package]]
@@ -5078,11 +5078,11 @@ dependencies = [
  "pallet-bags-list",
  "pallet-staking",
  "remote-externalities",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-storage 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-tracing 5.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
+ "sp-storage",
+ "sp-tracing",
  "tokio",
 ]
 
@@ -5098,7 +5098,7 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5114,7 +5114,7 @@ dependencies = [
  "scale-info",
  "serde",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5135,10 +5135,10 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "serde",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5153,10 +5153,10 @@ dependencies = [
  "pallet-treasury",
  "parity-scale-codec",
  "scale-info",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5170,10 +5170,10 @@ dependencies = [
  "log",
  "parity-scale-codec",
  "scale-info",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5192,12 +5192,12 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "serde",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-finality-grandpa",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-trie 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
+ "sp-trie",
 ]
 
 [[package]]
@@ -5217,10 +5217,10 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "serde",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5236,10 +5236,10 @@ dependencies = [
  "pallet-treasury",
  "parity-scale-codec",
  "scale-info",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5253,10 +5253,10 @@ dependencies = [
  "log",
  "parity-scale-codec",
  "scale-info",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5270,9 +5270,9 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "serde",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5289,11 +5289,11 @@ dependencies = [
  "rand 0.7.3",
  "scale-info",
  "sp-arithmetic",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-npos-elections",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
  "static_assertions",
  "strum 0.23.0",
 ]
@@ -5322,11 +5322,11 @@ dependencies = [
  "log",
  "parity-scale-codec",
  "scale-info",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-npos-elections",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5341,7 +5341,7 @@ dependencies = [
  "scale-info",
  "sp-arithmetic",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5358,13 +5358,13 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "sp-application-crypto",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-finality-grandpa",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
  "sp-runtime",
  "sp-session",
  "sp-staking",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5378,9 +5378,9 @@ dependencies = [
  "frame-system",
  "parity-scale-codec",
  "scale-info",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5396,11 +5396,11 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "sp-application-crypto",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
  "sp-staking",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5413,11 +5413,11 @@ dependencies = [
  "frame-system",
  "parity-scale-codec",
  "scale-info",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-keyring",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5431,10 +5431,10 @@ dependencies = [
  "log",
  "parity-scale-codec",
  "scale-info",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5448,11 +5448,11 @@ dependencies = [
  "frame-system",
  "parity-scale-codec",
  "scale-info",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-mmr-primitives",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5467,7 +5467,7 @@ dependencies = [
  "serde",
  "sp-api",
  "sp-blockchain",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-mmr-primitives",
  "sp-runtime",
 ]
@@ -5482,9 +5482,9 @@ dependencies = [
  "frame-system",
  "parity-scale-codec",
  "scale-info",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5496,9 +5496,9 @@ dependencies = [
  "frame-system",
  "parity-scale-codec",
  "scale-info",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5515,7 +5515,7 @@ dependencies = [
  "serde",
  "sp-runtime",
  "sp-staking",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5538,7 +5538,7 @@ dependencies = [
  "scale-info",
  "sp-runtime",
  "sp-staking",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5551,10 +5551,10 @@ dependencies = [
  "frame-system",
  "parity-scale-codec",
  "scale-info",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5567,9 +5567,9 @@ dependencies = [
  "frame-system",
  "parity-scale-codec",
  "scale-info",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5581,9 +5581,9 @@ dependencies = [
  "frame-system",
  "parity-scale-codec",
  "scale-info",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5597,9 +5597,9 @@ dependencies = [
  "log",
  "parity-scale-codec",
  "scale-info",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5614,13 +5614,13 @@ dependencies = [
  "pallet-timestamp",
  "parity-scale-codec",
  "scale-info",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
  "sp-session",
  "sp-staking",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-trie 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
+ "sp-trie",
 ]
 
 [[package]]
@@ -5636,7 +5636,7 @@ dependencies = [
  "rand 0.7.3",
  "sp-runtime",
  "sp-session",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5650,7 +5650,7 @@ dependencies = [
  "rand_chacha 0.2.2",
  "scale-info",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5670,10 +5670,10 @@ dependencies = [
  "scale-info",
  "serde",
  "sp-application-crypto",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
  "sp-runtime",
  "sp-staking",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5705,9 +5705,9 @@ dependencies = [
  "frame-system",
  "parity-scale-codec",
  "scale-info",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5722,9 +5722,9 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "sp-inherents",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
  "sp-timestamp",
 ]
 
@@ -5741,10 +5741,10 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "serde",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5758,10 +5758,10 @@ dependencies = [
  "scale-info",
  "serde",
  "smallvec",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5776,7 +5776,7 @@ dependencies = [
  "parity-scale-codec",
  "sp-api",
  "sp-blockchain",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-rpc",
  "sp-runtime",
 ]
@@ -5806,7 +5806,7 @@ dependencies = [
  "scale-info",
  "serde",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5821,7 +5821,7 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5834,10 +5834,10 @@ dependencies = [
  "frame-system",
  "parity-scale-codec",
  "scale-info",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5852,7 +5852,7 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -5868,10 +5868,10 @@ dependencies = [
  "polkadot-runtime-parachains",
  "scale-info",
  "serde",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
  "xcm",
  "xcm-builder",
  "xcm-executor",
@@ -5892,11 +5892,11 @@ dependencies = [
  "polkadot-primitives",
  "polkadot-runtime-common",
  "scale-info",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-tracing 5.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
+ "sp-tracing",
  "xcm",
  "xcm-builder",
  "xcm-executor",
@@ -6290,7 +6290,7 @@ dependencies = [
  "polkadot-primitives",
  "rand_core 0.5.1",
  "schnorrkel",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "tracing-gum",
 ]
 
@@ -6310,9 +6310,9 @@ dependencies = [
  "polkadot-node-subsystem-util",
  "polkadot-primitives",
  "sp-application-crypto",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-keyring",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-keystore",
  "tracing-gum",
 ]
 
@@ -6337,10 +6337,10 @@ dependencies = [
  "polkadot-primitives-test-helpers",
  "rand 0.8.5",
  "sc-network",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-keyring",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-tracing 5.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-keystore",
+ "sp-tracing",
  "thiserror",
  "tracing-gum",
 ]
@@ -6368,7 +6368,7 @@ dependencies = [
  "rand 0.8.5",
  "sc-network",
  "sp-application-crypto",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-keyring",
  "thiserror",
  "tracing-gum",
@@ -6391,8 +6391,8 @@ dependencies = [
  "sc-cli",
  "sc-service",
  "sc-tracing",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-trie 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-trie",
  "substrate-build-script-utils",
  "thiserror",
  "try-runtime-cli",
@@ -6426,7 +6426,7 @@ dependencies = [
  "sp-blockchain",
  "sp-consensus",
  "sp-consensus-babe",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-finality-grandpa",
  "sp-inherents",
  "sp-keyring",
@@ -6434,7 +6434,7 @@ dependencies = [
  "sp-offchain",
  "sp-runtime",
  "sp-session",
- "sp-storage 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-storage",
  "sp-timestamp",
  "sp-transaction-pool",
  "westend-runtime",
@@ -6460,9 +6460,9 @@ dependencies = [
  "polkadot-primitives",
  "polkadot-primitives-test-helpers",
  "sc-network",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-keyring",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-keystore",
  "sp-runtime",
  "thiserror",
  "tracing-gum",
@@ -6475,9 +6475,9 @@ dependencies = [
  "parity-scale-codec",
  "parity-util-mem",
  "scale-info",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -6505,8 +6505,8 @@ dependencies = [
  "sc-network",
  "sp-application-crypto",
  "sp-keyring",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-tracing 5.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-keystore",
+ "sp-tracing",
  "thiserror",
  "tracing-gum",
 ]
@@ -6519,8 +6519,8 @@ dependencies = [
  "polkadot-node-primitives",
  "polkadot-primitives",
  "reed-solomon-novelpoly",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-trie 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-trie",
  "thiserror",
 ]
 
@@ -6543,10 +6543,10 @@ dependencies = [
  "sc-network",
  "sp-application-crypto",
  "sp-consensus-babe",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-keyring",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-tracing 5.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-keystore",
+ "sp-tracing",
  "tracing-gum",
 ]
 
@@ -6569,7 +6569,7 @@ dependencies = [
  "polkadot-primitives-test-helpers",
  "sc-network",
  "sp-consensus",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-keyring",
  "tracing-gum",
 ]
@@ -6587,7 +6587,7 @@ dependencies = [
  "polkadot-node-subsystem-util",
  "polkadot-primitives",
  "polkadot-primitives-test-helpers",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-maybe-compressed-blob",
  "thiserror",
  "tracing-gum",
@@ -6623,9 +6623,9 @@ dependencies = [
  "sp-consensus",
  "sp-consensus-babe",
  "sp-consensus-slots",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-keyring",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-keystore",
  "sp-runtime",
  "thiserror",
  "tracing-gum",
@@ -6653,7 +6653,7 @@ dependencies = [
  "polkadot-overseer",
  "polkadot-primitives",
  "polkadot-primitives-test-helpers",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-keyring",
  "thiserror",
  "tracing-gum",
@@ -6676,10 +6676,10 @@ dependencies = [
  "polkadot-statement-table",
  "sc-keystore",
  "sp-application-crypto",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-keyring",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-tracing 5.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-keystore",
+ "sp-tracing",
  "thiserror",
  "tracing-gum",
 ]
@@ -6694,7 +6694,7 @@ dependencies = [
  "polkadot-node-subsystem-util",
  "polkadot-primitives",
  "polkadot-primitives-test-helpers",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-keystore",
  "thiserror",
  "tracing-gum",
  "wasm-timer",
@@ -6716,7 +6716,7 @@ dependencies = [
  "polkadot-parachain",
  "polkadot-primitives",
  "polkadot-primitives-test-helpers",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-keyring",
  "sp-maybe-compressed-blob",
  "tracing-gum",
@@ -6737,7 +6737,7 @@ dependencies = [
  "sc-client-api",
  "sc-consensus-babe",
  "sp-blockchain",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "tracing-gum",
 ]
 
@@ -6757,7 +6757,7 @@ dependencies = [
  "polkadot-node-subsystem-test-helpers",
  "polkadot-node-subsystem-util",
  "polkadot-primitives",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "thiserror",
  "tracing-gum",
 ]
@@ -6780,9 +6780,9 @@ dependencies = [
  "polkadot-primitives",
  "polkadot-primitives-test-helpers",
  "sc-keystore",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-keyring",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-keystore",
  "thiserror",
  "tracing-gum",
 ]
@@ -6818,7 +6818,7 @@ dependencies = [
  "polkadot-primitives-test-helpers",
  "rand 0.8.5",
  "sp-application-crypto",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-keystore",
  "thiserror",
  "tracing-gum",
 ]
@@ -6844,12 +6844,12 @@ dependencies = [
  "sc-executor-common",
  "sc-executor-wasmtime",
  "slotmap",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-externalities 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-externalities",
+ "sp-io",
  "sp-maybe-compressed-blob",
- "sp-tracing 5.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-wasm-interface 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-tracing",
+ "sp-wasm-interface",
  "tempfile",
  "test-parachain-adder",
  "test-parachain-halt",
@@ -6871,9 +6871,9 @@ dependencies = [
  "polkadot-primitives-test-helpers",
  "sc-keystore",
  "sp-application-crypto",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-keyring",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-keystore",
  "sp-runtime",
  "thiserror",
  "tracing-gum",
@@ -6895,7 +6895,7 @@ dependencies = [
  "sp-api",
  "sp-authority-discovery",
  "sp-consensus-babe",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-keyring",
  "tracing-gum",
 ]
@@ -6913,7 +6913,7 @@ dependencies = [
  "polkadot-node-primitives",
  "polkadot-primitives",
  "sc-network",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "thiserror",
 ]
 
@@ -6977,8 +6977,8 @@ dependencies = [
  "sp-application-crypto",
  "sp-consensus-babe",
  "sp-consensus-vrf",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-keystore",
  "sp-maybe-compressed-blob",
  "thiserror",
  "zstd",
@@ -7006,9 +7006,9 @@ dependencies = [
  "polkadot-primitives",
  "sc-keystore",
  "sp-application-crypto",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-keyring",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-keystore",
 ]
 
 [[package]]
@@ -7062,8 +7062,8 @@ dependencies = [
  "polkadot-primitives-test-helpers",
  "rand 0.8.5",
  "sp-application-crypto",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-keystore",
  "tempfile",
  "thiserror",
  "tracing-gum",
@@ -7090,7 +7090,7 @@ dependencies = [
  "polkadot-primitives-test-helpers",
  "sc-client-api",
  "sp-api",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "tracing-gum",
 ]
 
@@ -7135,9 +7135,9 @@ dependencies = [
  "polkadot-core-primitives",
  "scale-info",
  "serde",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -7172,14 +7172,14 @@ dependencies = [
  "sp-arithmetic",
  "sp-authority-discovery",
  "sp-consensus-slots",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-inherents",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
+ "sp-keystore",
  "sp-runtime",
  "sp-staking",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-trie 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
+ "sp-trie",
  "sp-version",
 ]
 
@@ -7219,7 +7219,7 @@ dependencies = [
  "sp-blockchain",
  "sp-consensus",
  "sp-consensus-babe",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-keystore",
  "sp-runtime",
  "substrate-frame-rpc-system",
  "substrate-state-trie-migration-rpc",
@@ -7293,9 +7293,9 @@ dependencies = [
  "sp-authority-discovery",
  "sp-block-builder",
  "sp-consensus-babe",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-inherents",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
  "sp-keyring",
  "sp-mmr-primitives",
  "sp-npos-elections",
@@ -7303,9 +7303,9 @@ dependencies = [
  "sp-runtime",
  "sp-session",
  "sp-staking",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
  "sp-transaction-pool",
- "sp-trie 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-trie",
  "sp-version",
  "static_assertions",
  "substrate-wasm-builder",
@@ -7354,15 +7354,15 @@ dependencies = [
  "serde_json",
  "slot-range-helper",
  "sp-api",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-inherents",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
+ "sp-keystore",
  "sp-npos-elections",
  "sp-runtime",
  "sp-session",
  "sp-staking",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
  "static_assertions",
  "trie-db",
  "xcm",
@@ -7386,8 +7386,8 @@ dependencies = [
  "bs58",
  "parity-scale-codec",
  "polkadot-primitives",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-tracing 5.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
+ "sp-tracing",
 ]
 
 [[package]]
@@ -7425,16 +7425,16 @@ dependencies = [
  "serde",
  "sp-api",
  "sp-application-crypto",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-inherents",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
  "sp-keyring",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-keystore",
  "sp-runtime",
  "sp-session",
  "sp-staking",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-tracing 5.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
+ "sp-tracing",
  "static_assertions",
  "thousands",
  "xcm",
@@ -7528,19 +7528,19 @@ dependencies = [
  "sp-blockchain",
  "sp-consensus",
  "sp-consensus-babe",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-finality-grandpa",
  "sp-inherents",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
+ "sp-keystore",
  "sp-offchain",
  "sp-runtime",
  "sp-session",
- "sp-state-machine 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-storage 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-state-machine",
+ "sp-storage",
  "sp-timestamp",
  "sp-transaction-pool",
- "sp-trie 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-trie",
  "substrate-prometheus-endpoint",
  "thiserror",
  "tracing-gum",
@@ -7569,11 +7569,11 @@ dependencies = [
  "sc-keystore",
  "sc-network",
  "sp-application-crypto",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-keyring",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-keystore",
  "sp-staking",
- "sp-tracing 5.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-tracing",
  "thiserror",
  "tracing-gum",
 ]
@@ -7584,7 +7584,7 @@ version = "0.9.19"
 dependencies = [
  "parity-scale-codec",
  "polkadot-primitives",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
 ]
 
 [[package]]
@@ -7604,11 +7604,11 @@ dependencies = [
  "sp-blockchain",
  "sp-consensus",
  "sp-consensus-babe",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-inherents",
  "sp-keyring",
  "sp-runtime",
- "sp-state-machine 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-state-machine",
  "sp-timestamp",
  "substrate-test-client",
 ]
@@ -7636,8 +7636,8 @@ dependencies = [
  "polkadot-node-subsystem-types",
  "polkadot-node-subsystem-util",
  "polkadot-primitives",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-keystore",
  "tracing-gum",
 ]
 
@@ -7686,18 +7686,18 @@ dependencies = [
  "sp-authority-discovery",
  "sp-block-builder",
  "sp-consensus-babe",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-inherents",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
  "sp-keyring",
  "sp-mmr-primitives",
  "sp-offchain",
  "sp-runtime",
  "sp-session",
  "sp-staking",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
  "sp-transaction-pool",
- "sp-trie 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-trie",
  "sp-version",
  "substrate-wasm-builder",
  "test-runtime-constants",
@@ -7748,12 +7748,12 @@ dependencies = [
  "sp-blockchain",
  "sp-consensus",
  "sp-consensus-babe",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-finality-grandpa",
  "sp-inherents",
  "sp-keyring",
  "sp-runtime",
- "sp-state-machine 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-state-machine",
  "substrate-test-client",
  "substrate-test-utils",
  "tempfile",
@@ -7770,7 +7770,7 @@ dependencies = [
  "generate-bags",
  "kusama-runtime",
  "polkadot-runtime",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
  "westend-runtime",
 ]
 
@@ -8313,8 +8313,8 @@ dependencies = [
  "pallet-bags-list-remote-tests",
  "polkadot-runtime",
  "polkadot-runtime-constants",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-tracing 5.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-tracing",
  "tokio",
  "westend-runtime",
  "westend-runtime-constants",
@@ -8331,8 +8331,8 @@ dependencies = [
  "parity-scale-codec",
  "serde",
  "serde_json",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
  "sp-version",
 ]
@@ -8482,15 +8482,15 @@ dependencies = [
  "sp-authority-discovery",
  "sp-block-builder",
  "sp-consensus-babe",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-inherents",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
  "sp-mmr-primitives",
  "sp-offchain",
  "sp-runtime",
  "sp-session",
  "sp-staking",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
  "sp-transaction-pool",
  "sp-version",
  "substrate-wasm-builder",
@@ -8675,8 +8675,8 @@ version = "4.1.0-dev"
 source = "git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3#e81c077a184ae828f39bb116ecdff1d67146467c"
 dependencies = [
  "log",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-wasm-interface 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-wasm-interface",
  "thiserror",
 ]
 
@@ -8700,8 +8700,8 @@ dependencies = [
  "sp-api",
  "sp-authority-discovery",
  "sp-blockchain",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-keystore",
  "sp-runtime",
  "substrate-prometheus-endpoint",
  "thiserror",
@@ -8724,7 +8724,7 @@ dependencies = [
  "sp-api",
  "sp-blockchain",
  "sp-consensus",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-inherents",
  "sp-runtime",
  "substrate-prometheus-endpoint",
@@ -8740,10 +8740,10 @@ dependencies = [
  "sp-api",
  "sp-block-builder",
  "sp-blockchain",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-inherents",
  "sp-runtime",
- "sp-state-machine 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-state-machine",
 ]
 
 [[package]]
@@ -8759,7 +8759,7 @@ dependencies = [
  "sc-telemetry",
  "serde",
  "serde_json",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-runtime",
 ]
 
@@ -8801,10 +8801,10 @@ dependencies = [
  "serde",
  "serde_json",
  "sp-blockchain",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-keyring",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-panic-handler 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-keystore",
+ "sp-panic-handler",
  "sp-runtime",
  "sp-version",
  "thiserror",
@@ -8829,14 +8829,14 @@ dependencies = [
  "sp-api",
  "sp-blockchain",
  "sp-consensus",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-database",
- "sp-externalities 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-externalities",
+ "sp-keystore",
  "sp-runtime",
- "sp-state-machine 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-storage 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-trie 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-state-machine",
+ "sp-storage",
+ "sp-trie",
  "substrate-prometheus-endpoint",
 ]
 
@@ -8858,11 +8858,11 @@ dependencies = [
  "sc-state-db",
  "sp-arithmetic",
  "sp-blockchain",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-database",
  "sp-runtime",
- "sp-state-machine 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-trie 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-state-machine",
+ "sp-trie",
 ]
 
 [[package]]
@@ -8882,9 +8882,9 @@ dependencies = [
  "sp-api",
  "sp-blockchain",
  "sp-consensus",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-runtime",
- "sp-state-machine 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-state-machine",
  "substrate-prometheus-endpoint",
  "thiserror",
 ]
@@ -8922,10 +8922,10 @@ dependencies = [
  "sp-consensus-babe",
  "sp-consensus-slots",
  "sp-consensus-vrf",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-inherents",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
+ "sp-keystore",
  "sp-runtime",
  "sp-version",
  "substrate-prometheus-endpoint",
@@ -8950,8 +8950,8 @@ dependencies = [
  "sp-blockchain",
  "sp-consensus",
  "sp-consensus-babe",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-keystore",
  "sp-runtime",
  "thiserror",
 ]
@@ -8986,10 +8986,10 @@ dependencies = [
  "sp-blockchain",
  "sp-consensus",
  "sp-consensus-slots",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-inherents",
  "sp-runtime",
- "sp-state-machine 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-state-machine",
  "sp-timestamp",
  "thiserror",
 ]
@@ -9018,16 +9018,16 @@ dependencies = [
  "sc-executor-wasmi",
  "sc-executor-wasmtime",
  "sp-api",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-core-hashing-proc-macro",
- "sp-externalities 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-panic-handler 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-runtime-interface 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-externalities",
+ "sp-io",
+ "sp-panic-handler",
+ "sp-runtime-interface",
  "sp-tasks",
- "sp-trie 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-trie",
  "sp-version",
- "sp-wasm-interface 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-wasm-interface",
  "tracing",
  "wasmi",
 ]
@@ -9040,10 +9040,10 @@ dependencies = [
  "environmental",
  "parity-scale-codec",
  "sc-allocator",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-maybe-compressed-blob",
  "sp-serializer",
- "sp-wasm-interface 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-wasm-interface",
  "thiserror",
  "wasm-instrument",
  "wasmi",
@@ -9059,9 +9059,9 @@ dependencies = [
  "sc-allocator",
  "sc-executor-common",
  "scoped-tls",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-runtime-interface 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-wasm-interface 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-runtime-interface",
+ "sp-wasm-interface",
  "wasmi",
 ]
 
@@ -9077,9 +9077,9 @@ dependencies = [
  "parity-wasm 0.42.2",
  "sc-allocator",
  "sc-executor-common",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-runtime-interface 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-wasm-interface 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-runtime-interface",
+ "sp-wasm-interface",
  "wasmtime",
 ]
 
@@ -9115,9 +9115,9 @@ dependencies = [
  "sp-arithmetic",
  "sp-blockchain",
  "sp-consensus",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-finality-grandpa",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-keystore",
  "sp-runtime",
  "substrate-prometheus-endpoint",
  "thiserror",
@@ -9142,7 +9142,7 @@ dependencies = [
  "serde",
  "serde_json",
  "sp-blockchain",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-runtime",
  "thiserror",
 ]
@@ -9174,8 +9174,8 @@ dependencies = [
  "parking_lot 0.12.0",
  "serde_json",
  "sp-application-crypto",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-keystore",
  "thiserror",
 ]
 
@@ -9218,7 +9218,7 @@ dependencies = [
  "sp-arithmetic",
  "sp-blockchain",
  "sp-consensus",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-finality-grandpa",
  "sp-runtime",
  "substrate-prometheus-endpoint",
@@ -9266,7 +9266,7 @@ dependencies = [
  "sc-network",
  "sc-utils",
  "sp-api",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-offchain",
  "sp-runtime",
  "threadpool",
@@ -9317,8 +9317,8 @@ dependencies = [
  "serde_json",
  "sp-api",
  "sp-blockchain",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-keystore",
  "sp-offchain",
  "sp-rpc",
  "sp-runtime",
@@ -9344,10 +9344,10 @@ dependencies = [
  "scale-info",
  "serde",
  "serde_json",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-rpc",
  "sp-runtime",
- "sp-tracing 5.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-tracing",
  "sp-version",
  "thiserror",
 ]
@@ -9412,18 +9412,18 @@ dependencies = [
  "sp-block-builder",
  "sp-blockchain",
  "sp-consensus",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-externalities 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-externalities",
  "sp-inherents",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-keystore",
  "sp-runtime",
  "sp-session",
- "sp-state-machine 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-storage 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-tracing 5.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-state-machine",
+ "sp-storage",
+ "sp-tracing",
  "sp-transaction-pool",
  "sp-transaction-storage-proof",
- "sp-trie 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-trie",
  "sp-version",
  "substrate-prometheus-endpoint",
  "tempfile",
@@ -9444,7 +9444,7 @@ dependencies = [
  "parity-util-mem-derive",
  "parking_lot 0.12.0",
  "sc-client-api",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
 ]
 
 [[package]]
@@ -9507,10 +9507,10 @@ dependencies = [
  "serde",
  "sp-api",
  "sp-blockchain",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-rpc",
  "sp-runtime",
- "sp-tracing 5.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-tracing",
  "thiserror",
  "tracing",
  "tracing-log",
@@ -9547,9 +9547,9 @@ dependencies = [
  "serde",
  "sp-api",
  "sp-blockchain",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-runtime",
- "sp-tracing 5.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-tracing",
  "sp-transaction-pool",
  "substrate-prometheus-endpoint",
  "thiserror",
@@ -10002,7 +10002,7 @@ dependencies = [
  "parity-scale-codec",
  "paste",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -10090,10 +10090,10 @@ dependencies = [
  "log",
  "parity-scale-codec",
  "sp-api-proc-macro",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-runtime",
- "sp-state-machine 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-state-machine",
+ "sp-std",
  "sp-version",
  "thiserror",
 ]
@@ -10118,9 +10118,9 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "serde",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
+ "sp-std",
 ]
 
 [[package]]
@@ -10133,8 +10133,8 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "serde",
- "sp-debug-derive 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-debug-derive",
+ "sp-std",
  "static_assertions",
 ]
 
@@ -10148,7 +10148,7 @@ dependencies = [
  "sp-api",
  "sp-application-crypto",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -10160,7 +10160,7 @@ dependencies = [
  "parity-scale-codec",
  "sp-inherents",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -10172,7 +10172,7 @@ dependencies = [
  "sp-api",
  "sp-inherents",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -10189,7 +10189,7 @@ dependencies = [
  "sp-consensus",
  "sp-database",
  "sp-runtime",
- "sp-state-machine 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-state-machine",
  "thiserror",
 ]
 
@@ -10203,11 +10203,11 @@ dependencies = [
  "futures-timer",
  "log",
  "parity-scale-codec",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-inherents",
  "sp-runtime",
- "sp-state-machine 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-state-machine",
+ "sp-std",
  "sp-version",
  "thiserror",
 ]
@@ -10227,11 +10227,11 @@ dependencies = [
  "sp-consensus",
  "sp-consensus-slots",
  "sp-consensus-vrf",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-inherents",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-keystore",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
  "sp-timestamp",
 ]
 
@@ -10245,7 +10245,7 @@ dependencies = [
  "serde",
  "sp-arithmetic",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
  "sp-timestamp",
 ]
 
@@ -10256,55 +10256,9 @@ source = "git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0
 dependencies = [
  "parity-scale-codec",
  "schnorrkel",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
-]
-
-[[package]]
-name = "sp-core"
-version = "6.0.0"
-source = "git+https://github.com/paritytech/substrate?branch=master#3eac88e5d81781e6b837d704ce8b10a1d5245fcc"
-dependencies = [
- "base58",
- "bitflags",
- "blake2-rfc",
- "byteorder",
- "dyn-clonable",
- "ed25519-dalek",
- "futures 0.3.21",
- "hash-db",
- "hash256-std-hasher",
- "hex",
- "impl-serde",
- "lazy_static",
- "libsecp256k1",
- "log",
- "merlin",
- "num-traits",
- "parity-scale-codec",
- "parity-util-mem",
- "parking_lot 0.12.0",
- "primitive-types",
- "rand 0.7.3",
- "regex",
- "scale-info",
- "schnorrkel",
- "secp256k1",
- "secrecy",
- "serde",
- "sp-core-hashing 4.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-debug-derive 4.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-externalities 0.12.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-runtime-interface 6.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-std 4.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-storage 6.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "ss58-registry",
- "substrate-bip39",
- "thiserror",
- "tiny-bip39",
- "wasmi",
- "zeroize",
+ "sp-std",
 ]
 
 [[package]]
@@ -10339,32 +10293,18 @@ dependencies = [
  "secp256k1",
  "secrecy",
  "serde",
- "sp-core-hashing 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-debug-derive 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-externalities 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-runtime-interface 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-storage 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core-hashing",
+ "sp-debug-derive",
+ "sp-externalities",
+ "sp-runtime-interface",
+ "sp-std",
+ "sp-storage",
  "ss58-registry",
  "substrate-bip39",
  "thiserror",
  "tiny-bip39",
  "wasmi",
  "zeroize",
-]
-
-[[package]]
-name = "sp-core-hashing"
-version = "4.0.0"
-source = "git+https://github.com/paritytech/substrate?branch=master#3eac88e5d81781e6b837d704ce8b10a1d5245fcc"
-dependencies = [
- "blake2 0.10.4",
- "byteorder",
- "digest 0.10.3",
- "sha2 0.10.2",
- "sha3 0.10.1",
- "sp-std 4.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "twox-hash",
 ]
 
 [[package]]
@@ -10377,7 +10317,7 @@ dependencies = [
  "digest 0.10.3",
  "sha2 0.10.2",
  "sha3 0.10.1",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
  "twox-hash",
 ]
 
@@ -10388,7 +10328,7 @@ source = "git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0
 dependencies = [
  "proc-macro2",
  "quote",
- "sp-core-hashing 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core-hashing",
  "syn",
 ]
 
@@ -10404,16 +10344,6 @@ dependencies = [
 [[package]]
 name = "sp-debug-derive"
 version = "4.0.0"
-source = "git+https://github.com/paritytech/substrate?branch=master#3eac88e5d81781e6b837d704ce8b10a1d5245fcc"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn",
-]
-
-[[package]]
-name = "sp-debug-derive"
-version = "4.0.0"
 source = "git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3#e81c077a184ae828f39bb116ecdff1d67146467c"
 dependencies = [
  "proc-macro2",
@@ -10424,23 +10354,12 @@ dependencies = [
 [[package]]
 name = "sp-externalities"
 version = "0.12.0"
-source = "git+https://github.com/paritytech/substrate?branch=master#3eac88e5d81781e6b837d704ce8b10a1d5245fcc"
-dependencies = [
- "environmental",
- "parity-scale-codec",
- "sp-std 4.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-storage 6.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
-]
-
-[[package]]
-name = "sp-externalities"
-version = "0.12.0"
 source = "git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3#e81c077a184ae828f39bb116ecdff1d67146467c"
 dependencies = [
  "environmental",
  "parity-scale-codec",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-storage 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
+ "sp-storage",
 ]
 
 [[package]]
@@ -10455,10 +10374,10 @@ dependencies = [
  "serde",
  "sp-api",
  "sp-application-crypto",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-keystore",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -10469,35 +10388,10 @@ dependencies = [
  "async-trait",
  "impl-trait-for-tuples",
  "parity-scale-codec",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
  "thiserror",
-]
-
-[[package]]
-name = "sp-io"
-version = "6.0.0"
-source = "git+https://github.com/paritytech/substrate?branch=master#3eac88e5d81781e6b837d704ce8b10a1d5245fcc"
-dependencies = [
- "futures 0.3.21",
- "hash-db",
- "libsecp256k1",
- "log",
- "parity-scale-codec",
- "parking_lot 0.12.0",
- "secp256k1",
- "sp-core 6.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-externalities 0.12.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-keystore 0.12.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-runtime-interface 6.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-state-machine 0.12.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-std 4.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-tracing 5.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-trie 6.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-wasm-interface 6.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "tracing",
- "tracing-core",
 ]
 
 [[package]]
@@ -10512,15 +10406,15 @@ dependencies = [
  "parity-scale-codec",
  "parking_lot 0.12.0",
  "secp256k1",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-externalities 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-runtime-interface 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-state-machine 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-tracing 5.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-trie 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-wasm-interface 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-externalities",
+ "sp-keystore",
+ "sp-runtime-interface",
+ "sp-state-machine",
+ "sp-std",
+ "sp-tracing",
+ "sp-trie",
+ "sp-wasm-interface",
  "tracing",
  "tracing-core",
 ]
@@ -10531,25 +10425,9 @@ version = "6.0.0"
 source = "git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3#e81c077a184ae828f39bb116ecdff1d67146467c"
 dependencies = [
  "lazy_static",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-runtime",
  "strum 0.23.0",
-]
-
-[[package]]
-name = "sp-keystore"
-version = "0.12.0"
-source = "git+https://github.com/paritytech/substrate?branch=master#3eac88e5d81781e6b837d704ce8b10a1d5245fcc"
-dependencies = [
- "async-trait",
- "futures 0.3.21",
- "merlin",
- "parity-scale-codec",
- "parking_lot 0.12.0",
- "schnorrkel",
- "sp-core 6.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-externalities 0.12.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "thiserror",
 ]
 
 [[package]]
@@ -10564,8 +10442,8 @@ dependencies = [
  "parking_lot 0.12.0",
  "schnorrkel",
  "serde",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-externalities 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-externalities",
  "thiserror",
 ]
 
@@ -10587,10 +10465,10 @@ dependencies = [
  "parity-scale-codec",
  "serde",
  "sp-api",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-debug-derive 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-debug-derive",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -10602,9 +10480,9 @@ dependencies = [
  "scale-info",
  "serde",
  "sp-arithmetic",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -10613,18 +10491,8 @@ version = "4.0.0-dev"
 source = "git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3#e81c077a184ae828f39bb116ecdff1d67146467c"
 dependencies = [
  "sp-api",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-runtime",
-]
-
-[[package]]
-name = "sp-panic-handler"
-version = "4.0.0"
-source = "git+https://github.com/paritytech/substrate?branch=master#3eac88e5d81781e6b837d704ce8b10a1d5245fcc"
-dependencies = [
- "backtrace",
- "lazy_static",
- "regex",
 ]
 
 [[package]]
@@ -10644,7 +10512,7 @@ source = "git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0
 dependencies = [
  "rustc-hash",
  "serde",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
 ]
 
 [[package]]
@@ -10664,26 +10532,9 @@ dependencies = [
  "serde",
  "sp-application-crypto",
  "sp-arithmetic",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
-]
-
-[[package]]
-name = "sp-runtime-interface"
-version = "6.0.0"
-source = "git+https://github.com/paritytech/substrate?branch=master#3eac88e5d81781e6b837d704ce8b10a1d5245fcc"
-dependencies = [
- "impl-trait-for-tuples",
- "parity-scale-codec",
- "primitive-types",
- "sp-externalities 0.12.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-runtime-interface-proc-macro 5.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-std 4.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-storage 6.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-tracing 5.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-wasm-interface 6.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "static_assertions",
+ "sp-core",
+ "sp-io",
+ "sp-std",
 ]
 
 [[package]]
@@ -10694,25 +10545,13 @@ dependencies = [
  "impl-trait-for-tuples",
  "parity-scale-codec",
  "primitive-types",
- "sp-externalities 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-runtime-interface-proc-macro 5.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-storage 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-tracing 5.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-wasm-interface 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-externalities",
+ "sp-runtime-interface-proc-macro",
+ "sp-std",
+ "sp-storage",
+ "sp-tracing",
+ "sp-wasm-interface",
  "static_assertions",
-]
-
-[[package]]
-name = "sp-runtime-interface-proc-macro"
-version = "5.0.0"
-source = "git+https://github.com/paritytech/substrate?branch=master#3eac88e5d81781e6b837d704ce8b10a1d5245fcc"
-dependencies = [
- "Inflector",
- "proc-macro-crate 1.1.3",
- "proc-macro2",
- "quote",
- "syn",
 ]
 
 [[package]]
@@ -10744,10 +10583,10 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "sp-api",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-runtime",
  "sp-staking",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
 ]
 
 [[package]]
@@ -10758,29 +10597,7 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
-]
-
-[[package]]
-name = "sp-state-machine"
-version = "0.12.0"
-source = "git+https://github.com/paritytech/substrate?branch=master#3eac88e5d81781e6b837d704ce8b10a1d5245fcc"
-dependencies = [
- "hash-db",
- "log",
- "num-traits",
- "parity-scale-codec",
- "parking_lot 0.12.0",
- "rand 0.7.3",
- "smallvec",
- "sp-core 6.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-externalities 0.12.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-panic-handler 4.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-std 4.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-trie 6.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "thiserror",
- "tracing",
- "trie-root",
+ "sp-std",
 ]
 
 [[package]]
@@ -10795,11 +10612,11 @@ dependencies = [
  "parking_lot 0.12.0",
  "rand 0.7.3",
  "smallvec",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-externalities 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-panic-handler 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-trie 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-externalities",
+ "sp-panic-handler",
+ "sp-std",
+ "sp-trie",
  "thiserror",
  "tracing",
  "trie-root",
@@ -10808,25 +10625,7 @@ dependencies = [
 [[package]]
 name = "sp-std"
 version = "4.0.0"
-source = "git+https://github.com/paritytech/substrate?branch=master#3eac88e5d81781e6b837d704ce8b10a1d5245fcc"
-
-[[package]]
-name = "sp-std"
-version = "4.0.0"
 source = "git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3#e81c077a184ae828f39bb116ecdff1d67146467c"
-
-[[package]]
-name = "sp-storage"
-version = "6.0.0"
-source = "git+https://github.com/paritytech/substrate?branch=master#3eac88e5d81781e6b837d704ce8b10a1d5245fcc"
-dependencies = [
- "impl-serde",
- "parity-scale-codec",
- "ref-cast",
- "serde",
- "sp-debug-derive 4.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-std 4.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
-]
 
 [[package]]
 name = "sp-storage"
@@ -10837,8 +10636,8 @@ dependencies = [
  "parity-scale-codec",
  "ref-cast",
  "serde",
- "sp-debug-derive 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-debug-derive",
+ "sp-std",
 ]
 
 [[package]]
@@ -10847,11 +10646,11 @@ version = "4.0.0-dev"
 source = "git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3#e81c077a184ae828f39bb116ecdff1d67146467c"
 dependencies = [
  "log",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-externalities 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-runtime-interface 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-externalities",
+ "sp-io",
+ "sp-runtime-interface",
+ "sp-std",
 ]
 
 [[package]]
@@ -10866,20 +10665,8 @@ dependencies = [
  "sp-api",
  "sp-inherents",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
  "thiserror",
-]
-
-[[package]]
-name = "sp-tracing"
-version = "5.0.0"
-source = "git+https://github.com/paritytech/substrate?branch=master#3eac88e5d81781e6b837d704ce8b10a1d5245fcc"
-dependencies = [
- "parity-scale-codec",
- "sp-std 4.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "tracing",
- "tracing-core",
- "tracing-subscriber 0.2.25",
 ]
 
 [[package]]
@@ -10888,7 +10675,7 @@ version = "5.0.0"
 source = "git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3#e81c077a184ae828f39bb116ecdff1d67146467c"
 dependencies = [
  "parity-scale-codec",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
  "tracing",
  "tracing-core",
  "tracing-subscriber 0.2.25",
@@ -10912,27 +10699,11 @@ dependencies = [
  "log",
  "parity-scale-codec",
  "scale-info",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-inherents",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-trie 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
-]
-
-[[package]]
-name = "sp-trie"
-version = "6.0.0"
-source = "git+https://github.com/paritytech/substrate?branch=master#3eac88e5d81781e6b837d704ce8b10a1d5245fcc"
-dependencies = [
- "hash-db",
- "memory-db",
- "parity-scale-codec",
- "scale-info",
- "sp-core 6.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "sp-std 4.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "thiserror",
- "trie-db",
- "trie-root",
+ "sp-std",
+ "sp-trie",
 ]
 
 [[package]]
@@ -10944,8 +10715,8 @@ dependencies = [
  "memory-db",
  "parity-scale-codec",
  "scale-info",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-std",
  "thiserror",
  "trie-db",
  "trie-root",
@@ -10963,7 +10734,7 @@ dependencies = [
  "serde",
  "sp-core-hashing-proc-macro",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
  "sp-version-proc-macro",
  "thiserror",
 ]
@@ -10982,24 +10753,12 @@ dependencies = [
 [[package]]
 name = "sp-wasm-interface"
 version = "6.0.0"
-source = "git+https://github.com/paritytech/substrate?branch=master#3eac88e5d81781e6b837d704ce8b10a1d5245fcc"
-dependencies = [
- "impl-trait-for-tuples",
- "log",
- "parity-scale-codec",
- "sp-std 4.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "wasmi",
-]
-
-[[package]]
-name = "sp-wasm-interface"
-version = "6.0.0"
 source = "git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3#e81c077a184ae828f39bb116ecdff1d67146467c"
 dependencies = [
  "impl-trait-for-tuples",
  "log",
  "parity-scale-codec",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
  "wasmi",
  "wasmtime",
 ]
@@ -11066,8 +10825,8 @@ dependencies = [
  "sc-transaction-pool-api",
  "serde",
  "serde_json",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-npos-elections",
  "sp-runtime",
  "sp-version",
@@ -11219,7 +10978,7 @@ dependencies = [
  "sp-api",
  "sp-block-builder",
  "sp-blockchain",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-runtime",
 ]
 
@@ -11250,12 +11009,12 @@ dependencies = [
  "sc-rpc-api",
  "scale-info",
  "serde",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
- "sp-state-machine 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-trie 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-state-machine",
+ "sp-std",
+ "sp-trie",
  "trie-db",
 ]
 
@@ -11278,11 +11037,11 @@ dependencies = [
  "serde_json",
  "sp-blockchain",
  "sp-consensus",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-keyring",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-keystore",
  "sp-runtime",
- "sp-state-machine 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-state-machine",
 ]
 
 [[package]]
@@ -11431,8 +11190,8 @@ dependencies = [
  "dlmalloc",
  "parity-scale-codec",
  "polkadot-parachain",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
+ "sp-std",
  "substrate-wasm-builder",
  "tiny-keccak",
 ]
@@ -11456,7 +11215,7 @@ dependencies = [
  "polkadot-test-service",
  "sc-cli",
  "sc-service",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-keyring",
  "substrate-test-utils",
  "test-parachain-adder",
@@ -11478,8 +11237,8 @@ dependencies = [
  "log",
  "parity-scale-codec",
  "polkadot-parachain",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
+ "sp-std",
  "substrate-wasm-builder",
  "tiny-keccak",
 ]
@@ -11503,7 +11262,7 @@ dependencies = [
  "polkadot-test-service",
  "sc-cli",
  "sc-service",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-keyring",
  "substrate-test-utils",
  "test-parachain-undying",
@@ -11515,7 +11274,7 @@ name = "test-parachains"
 version = "0.9.19"
 dependencies = [
  "parity-scale-codec",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "test-parachain-adder",
  "test-parachain-halt",
  "tiny-keccak",
@@ -12025,12 +11784,12 @@ dependencies = [
  "sc-executor",
  "sc-service",
  "serde",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-externalities 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-keystore 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-externalities",
+ "sp-io",
+ "sp-keystore",
  "sp-runtime",
- "sp-state-machine 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-state-machine",
  "sp-version",
  "zstd",
 ]
@@ -12746,9 +12505,9 @@ dependencies = [
  "sp-authority-discovery",
  "sp-block-builder",
  "sp-consensus-babe",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
  "sp-inherents",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
  "sp-keyring",
  "sp-mmr-primitives",
  "sp-npos-elections",
@@ -12756,9 +12515,9 @@ dependencies = [
  "sp-runtime",
  "sp-session",
  "sp-staking",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
  "sp-transaction-pool",
- "sp-trie 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-trie",
  "sp-version",
  "substrate-wasm-builder",
  "tiny-keccak",
@@ -12940,7 +12699,7 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "serde",
- "sp-io 6.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
+ "sp-io",
  "xcm-procedural",
 ]
 
@@ -12961,10 +12720,10 @@ dependencies = [
  "polkadot-runtime-parachains",
  "scale-info",
  "sp-arithmetic",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
  "xcm",
  "xcm-executor",
 ]
@@ -12979,10 +12738,10 @@ dependencies = [
  "log",
  "parity-scale-codec",
  "sp-arithmetic",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
  "xcm",
 ]
 
@@ -13000,8 +12759,8 @@ dependencies = [
  "sp-consensus",
  "sp-keyring",
  "sp-runtime",
- "sp-state-machine 0.12.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-tracing 5.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-state-machine",
+ "sp-tracing",
  "xcm",
  "xcm-executor",
 ]
@@ -13026,8 +12785,8 @@ dependencies = [
  "polkadot-core-primitives",
  "polkadot-parachain",
  "polkadot-runtime-parachains",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-io",
+ "sp-std",
  "xcm",
  "xcm-executor",
 ]
@@ -13047,11 +12806,11 @@ dependencies = [
  "polkadot-parachain",
  "polkadot-runtime-parachains",
  "scale-info",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-tracing 5.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
+ "sp-tracing",
  "xcm",
  "xcm-builder",
  "xcm-executor",
@@ -13072,10 +12831,10 @@ dependencies = [
  "polkadot-parachain",
  "polkadot-runtime-parachains",
  "scale-info",
- "sp-core 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
- "sp-io 6.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
- "sp-std 4.0.0 (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.19-gorka-xcm-v3)",
+ "sp-std",
  "xcm",
  "xcm-builder",
  "xcm-executor",
