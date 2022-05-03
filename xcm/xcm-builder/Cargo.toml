@@ -6,27 +6,30 @@ description = "Tools & types for building with XCM and its executor."
 version = "0.9.19"
 
 [dependencies]
+impl-trait-for-tuples = "0.2.1"
 parity-scale-codec = { version = "3.1.2", default-features = false, features = ["derive"] }
-scale-info = { version = "2.0.0", default-features = false, features = ["derive"] }
+scale-info = { version = "2.1.1", default-features = false, features = ["derive"] }
 xcm = { path = "..", default-features = false }
 xcm-executor = { path = "../xcm-executor", default-features = false }
-sp-std = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.19" }
-sp-arithmetic = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.19" }
-sp-io = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.19" }
-sp-runtime = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.19" }
-frame-support = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.19" }
-frame-system = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.19" }
-pallet-transaction-payment = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.19" }
+sp-std = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.19-gorka-xcm-v3" }
+sp-arithmetic = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.19-gorka-xcm-v3" }
+sp-io = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.19-gorka-xcm-v3" }
+sp-runtime = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.19-gorka-xcm-v3" }
+frame-support = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.19-gorka-xcm-v3" }
+frame-system = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.19-gorka-xcm-v3" }
+pallet-transaction-payment = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.19-gorka-xcm-v3" }
 log = { version = "0.4.16", default-features = false }
 
 # Polkadot dependencies
 polkadot-parachain = { path = "../../parachain", default-features = false }
 
 [dev-dependencies]
-sp-core = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.19" }
-pallet-balances = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.19" }
+sp-core = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.19-gorka-xcm-v3" }
+pallet-balances = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.19-gorka-xcm-v3" }
 pallet-xcm = { path = "../pallet-xcm" }
 polkadot-runtime-parachains = { path = "../../runtime/parachains" }
+assert_matches = "1.5.0"
+
 [features]
 default = ["std"]
 runtime-benchmarks = []
@@ -41,6 +44,7 @@ std = [
 	"sp-io/std",
 	"sp-runtime/std",
 	"frame-support/std",
+	"frame-system/std",
 	"polkadot-parachain/std",
 	"pallet-transaction-payment/std",
 ]

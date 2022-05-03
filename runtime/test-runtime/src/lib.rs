@@ -35,27 +35,29 @@ use polkadot_runtime_parachains::{
 
 use authority_discovery_primitives::AuthorityId as AuthorityDiscoveryId;
 use beefy_primitives::crypto::AuthorityId as BeefyId;
+use frame_election_provider_support::{onchain, SequentialPhragmen};
 use frame_support::{
 	construct_runtime, parameter_types,
 	traits::{Everything, KeyOwnerProofSystem},
 };
 use pallet_grandpa::{fg_primitives, AuthorityId as GrandpaId};
-use pallet_mmr_primitives as mmr;
 use pallet_session::historical as session_historical;
 use pallet_transaction_payment::{FeeDetails, RuntimeDispatchInfo};
 use polkadot_runtime_parachains::reward_points::RewardValidatorsWithEraPoints;
 use primitives::v2::{
-	AccountId, AccountIndex, Balance, BlockNumber, CandidateEvent, CommittedCandidateReceipt,
-	CoreState, GroupRotationInfo, Hash as HashT, Id as ParaId, InboundDownwardMessage,
-	InboundHrmpMessage, Moment, Nonce, OccupiedCoreAssumption, PersistedValidationData,
-	ScrapedOnChainVotes, SessionInfo as SessionInfoData, Signature, ValidationCode,
-	ValidationCodeHash, ValidatorId, ValidatorIndex,
+	AccountId, AccountIndex, Balance, BlockNumber, CandidateEvent, CandidateHash,
+	CommittedCandidateReceipt, CoreState, DisputeState, GroupRotationInfo, Hash as HashT,
+	Id as ParaId, InboundDownwardMessage, InboundHrmpMessage, Moment, Nonce,
+	OccupiedCoreAssumption, PersistedValidationData, ScrapedOnChainVotes,
+	SessionInfo as SessionInfoData, Signature, ValidationCode, ValidationCodeHash, ValidatorId,
+	ValidatorIndex,
 };
 use runtime_common::{
 	claims, impl_runtime_weights, paras_sudo_wrapper, BlockHashCount, BlockLength,
 	SlowAdjustingFeeUpdate,
 };
 use sp_core::OpaqueMetadata;
+use sp_mmr_primitives as mmr;
 use sp_runtime::{
 	create_runtime_str,
 	curve::PiecewiseLinear,
@@ -318,6 +320,14 @@ parameter_types! {
 	pub const MaxAuthorities: u32 = 100_000;
 }
 
+pub struct OnChainSeqPhragmen;
+impl onchain::Config for OnChainSeqPhragmen {
+	type System = Runtime;
+	type Solver = SequentialPhragmen<AccountId, runtime_common::elections::OnChainAccuracy>;
+	type DataProvider = Staking;
+	type WeightInfo = ();
+}
+
 impl pallet_staking::Config for Runtime {
 	type MaxNominations = frame_support::pallet_prelude::ConstU32<16>;
 	type Currency = Balances;
@@ -337,12 +347,8 @@ impl pallet_staking::Config for Runtime {
 	type MaxNominatorRewardedPerValidator = MaxNominatorRewardedPerValidator;
 	type OffendingValidatorsThreshold = OffendingValidatorsThreshold;
 	type NextNewSession = Session;
-	type ElectionProvider = frame_election_provider_support::onchain::UnboundedExecution<
-		runtime_common::elections::OnChainSeqPhragmen<Self, Staking>,
-	>;
-	type GenesisElectionProvider = frame_election_provider_support::onchain::UnboundedExecution<
-		runtime_common::elections::OnChainSeqPhragmen<Self, Staking>,
-	>;
+	type ElectionProvider = onchain::UnboundedExecution<OnChainSeqPhragmen>;
+	type GenesisElectionProvider = onchain::UnboundedExecution<OnChainSeqPhragmen>;
 	// Use the nominator map to iter voter AND no-ops for all SortedListProvider hooks. The migration
 	// to bags-list is a no-op, but the storage version will be updated.
 	type VoterList = pallet_staking::UseNominatorsAndValidatorsMap<Runtime>;
@@ -519,8 +525,9 @@ impl parachains_ump::Config for Runtime {
 
 parameter_types! {
 	pub const BaseXcmWeight: frame_support::weights::Weight = 1_000;
-	pub const AnyNetwork: xcm::latest::NetworkId = xcm::latest::NetworkId::Any;
+	pub const AnyNetwork: Option<xcm::latest::NetworkId> = None;
 	pub const MaxInstructions: u32 = 100;
+	pub const UniversalLocation: xcm::latest::InteriorMultiLocation = xcm::latest::Junctions::Here;
 }
 
 pub type LocalOriginToLocation = xcm_builder::SignedToAccountId32<Origin, AccountId, AnyNetwork>;
@@ -530,7 +537,7 @@ impl pallet_xcm::Config for Runtime {
 	// is `XcmExecutor`, which will be used in unit tests located in xcm-executor.
 	type Event = Event;
 	type ExecuteXcmOrigin = xcm_builder::EnsureXcmOrigin<Origin, LocalOriginToLocation>;
-	type LocationInverter = xcm_config::InvertNothing;
+	type UniversalLocation = UniversalLocation;
 	type SendXcmOrigin = xcm_builder::EnsureXcmOrigin<Origin, LocalOriginToLocation>;
 	type Weigher = xcm_builder::FixedWeightBounds<BaseXcmWeight, Call, MaxInstructions>;
 	type XcmRouter = xcm_config::DoNothingRouter;
@@ -542,6 +549,11 @@ impl pallet_xcm::Config for Runtime {
 	type Call = Call;
 	const VERSION_DISCOVERY_QUEUE_SIZE: u32 = 100;
 	type AdvertisedXcmVersion = pallet_xcm::CurrentXcmVersion;
+	type Currency = Balances;
+	type CurrencyMatcher = ();
+	type TrustedLockers = ();
+	type SovereignAccountOf = ();
+	type MaxLockers = frame_support::traits::ConstU32<8>;
 }
 
 impl parachains_hrmp::Config for Runtime {
@@ -606,8 +618,9 @@ pub mod pallet_test_notifier {
 				.using_encoded(|mut d| <[u8; 32]>::decode(&mut d))
 				.map_err(|_| Error::<T>::BadAccountFormat)?;
 			let qid = pallet_xcm::Pallet::<T>::new_query(
-				Junction::AccountId32 { network: Any, id }.into(),
+				Junction::AccountId32 { network: None, id },
 				100u32.into(),
+				Here,
 			);
 			Self::deposit_event(Event::<T>::QueryPrepared(qid));
 			Ok(())
@@ -622,9 +635,10 @@ pub mod pallet_test_notifier {
 			let call =
 				Call::<T>::notification_received { query_id: 0, response: Default::default() };
 			let qid = pallet_xcm::Pallet::<T>::new_notify_query(
-				Junction::AccountId32 { network: Any, id }.into(),
+				Junction::AccountId32 { network: None, id },
 				<T as Config>::Call::from(call),
 				100u32.into(),
+				Here,
 			);
 			Self::deposit_event(Event::<T>::NotifyQueryPrepared(qid));
 			Ok(())
@@ -799,7 +813,7 @@ sp_api::impl_runtime_apis! {
 		}
 	}
 
-	impl primitives::v2::ParachainHost<Block, Hash, BlockNumber> for Runtime {
+	impl primitives::runtime_api::ParachainHost<Block, Hash, BlockNumber> for Runtime {
 		fn validators() -> Vec<ValidatorId> {
 			runtime_impl::validators::<Runtime>()
 		}
@@ -893,6 +907,10 @@ sp_api::impl_runtime_apis! {
 		{
 			runtime_impl::validation_code_hash::<Runtime>(para_id, assumption)
 		}
+
+		fn staging_get_disputes() -> Vec<(SessionIndex, CandidateHash, DisputeState<BlockNumber>)> {
+			polkadot_runtime_parachains::runtime_api_impl::vstaging::get_session_disputes::<Runtime>()
+		}
 	}
 
 	impl beefy_primitives::BeefyApi<Block> for Runtime {
@@ -925,6 +943,12 @@ sp_api::impl_runtime_apis! {
 			// dummy implementation due to lack of MMR pallet.
 			Err(mmr::Error::Verify)
 		}
+
+		fn mmr_root() -> Result<Hash, mmr::Error> {
+			// dummy implementation due to lack of MMR pallet.
+			Err(mmr::Error::Verify)
+		}
+
 	}
 
 	impl fg_primitives::GrandpaApi<Block> for Runtime {
