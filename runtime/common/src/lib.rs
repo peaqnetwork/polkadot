@@ -52,7 +52,6 @@ pub use pallet_balances::Call as BalancesCall;
 pub use pallet_staking::StakerStatus;
 pub use pallet_timestamp::Call as TimestampCall;
 use pallet_transaction_payment::{Multiplier, TargetedFeeAdjustment};
-pub use sp_runtime::traits::Bounded;
 #[cfg(any(feature = "std", test))]
 pub use sp_runtime::BuildStorage;
 
@@ -87,8 +86,6 @@ parameter_types! {
 	/// that combined with `AdjustmentVariable`, we can recover from the minimum.
 	/// See `multiplier_can_grow_from_zero`.
 	pub MinimumMultiplier: Multiplier = Multiplier::saturating_from_rational(1, 10u128);
-	/// The maximum amount of the multiplier.
-	pub MaximumMultiplier: Multiplier = Bounded::max_value();
 	/// Maximum length of block. Up to 5MB.
 	pub BlockLength: limits::BlockLength =
 	limits::BlockLength::max_with_normal_ratio(5 * 1024 * 1024, NORMAL_DISPATCH_RATIO);
@@ -101,7 +98,6 @@ pub type SlowAdjustingFeeUpdate<R> = TargetedFeeAdjustment<
 	TargetBlockFullness,
 	AdjustmentVariable,
 	MinimumMultiplier,
-	MaximumMultiplier,
 >;
 
 /// Implements the weight types for a runtime.
