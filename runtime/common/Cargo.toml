@@ -41,7 +41,6 @@ pallet-treasury = { git = "https://github.com/purestake/substrate", default-feat
 pallet-election-provider-multi-phase = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.38" }
 pallet-beefy-mmr = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.38" }
 frame-election-provider-support = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.38" }
-pallet-bags-list = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.38" }
 
 frame-benchmarking = { git = "https://github.com/purestake/substrate", default-features = false, optional = true , branch = "moonbeam-polkadot-v0.9.38" }
 pallet-babe = { git = "https://github.com/purestake/substrate", default-features = false, optional = true , branch = "moonbeam-polkadot-v0.9.38" }
@@ -102,7 +101,6 @@ std = [
 	"runtime-parachains/std",
 	"xcm/std",
 	"sp-npos-elections/std",
-	"pallet-bags-list/std"
 ]
 runtime-benchmarks = [
 	"libsecp256k1/hmac",
@@ -112,7 +110,6 @@ runtime-benchmarks = [
 	"frame-system/runtime-benchmarks",
 	"runtime-parachains/runtime-benchmarks",
 	"pallet-babe/runtime-benchmarks",
-	"pallet-bags-list/runtime-benchmarks",
 	"pallet-fast-unstake/runtime-benchmarks"
 ]
 try-runtime = [
