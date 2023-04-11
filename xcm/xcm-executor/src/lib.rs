@@ -76,7 +76,6 @@ pub struct XcmExecutor<Config: config::Config> {
 	appendix_weight: Weight,
 	transact_status: MaybeErrorCode,
 	fees_mode: FeesMode,
-	maybe_asset_not_withdrawable: Option<(MultiAsset, MultiLocation)>,
 	_config: PhantomData<Config>,
 }
 
@@ -290,7 +289,6 @@ impl<Config: config::Config> XcmExecutor<Config> {
 			appendix_weight: Weight::zero(),
 			transact_status: Default::default(),
 			fees_mode: FeesMode { jit_withdraw: false },
-			maybe_asset_not_withdrawable: None,
 			_config: PhantomData,
 		}
 	}
@@ -478,13 +476,7 @@ impl<Config: config::Config> XcmExecutor<Config> {
 				// Take `assets` from the origin account (on-chain) and place in holding.
 				let origin = *self.origin_ref().ok_or(XcmError::BadOrigin)?;
 				for asset in assets.into_inner().into_iter() {
-					match Config::AssetTransactor::withdraw_asset(&asset, &origin, Some(&self.context)) {
-						Err(XcmError::NotWithdrawable) if self.maybe_asset_not_withdrawable.is_none() => {
-							self.maybe_asset_not_withdrawable.replace((asset.clone(), origin.clone()));
-						},
-						Err(e) => return Err(e),
-						Ok(_) => {}
-					}
+					Config::AssetTransactor::withdraw_asset(&asset, &origin, Some(&self.context))?;
 					self.subsume_asset(asset)?;
 				}
 				Ok(())
@@ -618,32 +610,17 @@ impl<Config: config::Config> XcmExecutor<Config> {
 				)?;
 				Ok(())
 			},
-			DepositAsset { mut assets, beneficiary } => {
-				Self::lazy_transfer_not_withdrawable(
-					&mut assets,
-					&mut self.maybe_asset_not_withdrawable,
-					&beneficiary,
-					&self.context,
-				)?;
+			DepositAsset { assets, beneficiary } => {
 				let deposited = self.holding.saturating_take(assets);
 				for asset in deposited.into_assets_iter() {
 					Config::AssetTransactor::deposit_asset(&asset, &beneficiary, &self.context)?;
 				}
 				Ok(())
 			},
-			DepositReserveAsset { mut assets, dest, xcm } => {
-				let maybe_not_withdrawable = Self::lazy_transfer_not_withdrawable(
-					&mut assets,
-					&mut self.maybe_asset_not_withdrawable,
-					&dest,
-					&self.context,
-				)?;
-				let mut deposited = self.holding.saturating_take(assets);
+			DepositReserveAsset { assets, dest, xcm } => {
+				let deposited = self.holding.saturating_take(assets);
 				for asset in deposited.assets_iter() {
 					Config::AssetTransactor::deposit_asset(&asset, &dest, &self.context)?;
-				}
-				if let Some(not_withdrawable) = maybe_not_withdrawable {
-					deposited.subsume(not_withdrawable);
 				}
 				// Note that we pass `None` as `maybe_failed_bin` and drop any assets which cannot
 				// be reanchored  because we have already called `deposit_asset` on all assets.
@@ -1025,41 +1002,5 @@ impl<Config: config::Config> XcmExecutor<Config> {
 		let reanchor_context = Config::UniversalLocation::get();
 		assets.reanchor(dest, reanchor_context, maybe_failed_bin);
 		assets.into_assets_iter().collect::<Vec<_>>().into()
-	}
-	/// Transfer the eventual non-withdrawable asset that was tracked earlier in the execution
-	/// In the case of a counted filter, the counter may have to be reduced by 1
-	fn lazy_transfer_not_withdrawable(
-		assets_filter: &mut MultiAssetFilter,
-		maybe_asset_not_withdrawable: &mut Option<(MultiAsset, MultiLocation)>,
-		beneficiary: &MultiLocation,
-		context: &XcmContext,
-	) -> Result<Option<MultiAsset>, XcmError> {
-		let replace = if let Some((asset, origin)) = maybe_asset_not_withdrawable.take() {
-			let matches = assets_filter.matches(&asset);
-			if matches {
-				Config::AssetTransactor::transfer_asset(
-					&asset,
-					&origin,
-					beneficiary,
-					context,
-				)?;
-				// In the case of a counted filter, the counter should be reduced by 1
-				if let Wild(WildMultiAsset::AllCounted(ref mut count)
-					| WildMultiAsset::AllOfCounted { ref mut count, .. }) = assets_filter {
-					// We are in the "if matches" block, so the counter was necessarily greater than zero
-					*count -= 1;
-				}
-				return Ok(Some(asset));
-			} else {
-				// If the filter does not match, the non-withdrawable asset should be kept for later
-				Some((asset, origin))
-			}
-		} else {
-			None
-		};
-		if let Some((asset, origin)) = replace {
-			maybe_asset_not_withdrawable.replace((asset, origin));
-		}
-		Ok(None)
 	}
 }
