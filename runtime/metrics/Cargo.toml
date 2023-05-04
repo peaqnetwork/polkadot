@@ -5,8 +5,8 @@ authors.workspace = true
 edition.workspace = true
 
 [dependencies]
-sp-std = { package = "sp-std", git = "https://github.com/purestake/substrate", default-features = false, branch = "moonbeam-polkadot-v0.9.38" }
-sp-tracing = { git = "https://github.com/purestake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.38" }
+sp-std = { package = "sp-std", git = "https://github.com/peaqnetwork/substrate", default-features = false, branch = "peaq-polkadot-v0.9.38" }
+sp-tracing = { git = "https://github.com/peaqnetwork/substrate", default-features = false , branch = "peaq-polkadot-v0.9.38" }
 parity-scale-codec = { version = "3.1.5", default-features = false }
 primitives = { package = "polkadot-primitives", path = "../../primitives", default-features = false }
 
