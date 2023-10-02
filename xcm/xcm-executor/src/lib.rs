@@ -638,13 +638,6 @@ impl<Config: config::Config> XcmExecutor<Config> {
 					&reserve,
 					Some(&mut self.holding),
 				);
-				for asset in assets.inner().iter() {
-					// Must ensure that we recognise the asset as being managed by the destination.
-					ensure!(
-						Config::IsReserve::contains(&asset, &reserve),
-						XcmError::UntrustedReserveLocation
-					);
-				}
 				let mut message = vec![WithdrawAsset(assets), ClearOrigin];
 				message.extend(xcm.0.into_iter());
 				self.send(reserve, Xcm(message), FeeReason::InitiateReserveWithdraw)?;
