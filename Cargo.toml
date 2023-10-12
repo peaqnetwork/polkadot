@@ -15,7 +15,7 @@ version.workspace = true
 [workspace.package]
 authors = ["Parity Technologies <admin@parity.io>"]
 edition = "2021"
-repository = "https://github.com/paritytech/polkadot.git"
+repository = "https://github.com/peaqnetwork/polkadot.git"
 version = "0.9.43"
 
 [dependencies]
@@ -32,7 +32,7 @@ assert_cmd = "2.0.4"
 nix = { version = "0.26.1", features = ["signal"] }
 tempfile = "3.2.0"
 tokio = "1.24.2"
-substrate-rpc-client = { git = "https://github.com/moonbeam-foundation/substrate", branch = "moonbeam-polkadot-v0.9.43" }
+substrate-rpc-client = { git = "https://github.com/peaqnetwork/substrate", branch = "peaq-polkadot-v0.9.43" }
 polkadot-core-primitives = { path = "core-primitives" }
 
 [workspace]

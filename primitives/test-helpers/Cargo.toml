@@ -5,9 +5,9 @@ authors.workspace = true
 edition.workspace = true
 
 [dependencies]
-sp-keyring = { git = "https://github.com/moonbeam-foundation/substrate", branch = "moonbeam-polkadot-v0.9.43" }
-sp-application-crypto = { package = "sp-application-crypto", git = "https://github.com/moonbeam-foundation/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.43" }
-sp-runtime = { git = "https://github.com/moonbeam-foundation/substrate", branch = "moonbeam-polkadot-v0.9.43" }
-sp-core = { git = "https://github.com/moonbeam-foundation/substrate", features = ["std"] , branch = "moonbeam-polkadot-v0.9.43" }
+sp-keyring = { git = "https://github.com/peaqnetwork/substrate", branch = "peaq-polkadot-v0.9.43" }
+sp-application-crypto = { package = "sp-application-crypto", git = "https://github.com/peaqnetwork/substrate", default-features = false , branch = "peaq-polkadot-v0.9.43" }
+sp-runtime = { git = "https://github.com/peaqnetwork/substrate", branch = "peaq-polkadot-v0.9.43" }
+sp-core = { git = "https://github.com/peaqnetwork/substrate", features = ["std"] , branch = "peaq-polkadot-v0.9.43" }
 polkadot-primitives = { path = "../" }
 rand = "0.8.5"
